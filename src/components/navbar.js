@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Menu } from 'antd'
-import Logo from '../images/assets/logo-white.png';
+import Logo from '../images/logo/logo-white.png';
 import './navbar.scss'
 
 const Navbar = () => (
