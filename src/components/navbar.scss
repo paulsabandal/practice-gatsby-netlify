@@ -1,0 +1,24 @@
+.navbar {
+	height: 90px;
+	.logo {
+	  margin: 8px;
+	  float: left;
+	}
+	.nav {
+		background-color: transparent;
+		border-bottom: none;
+		line-height: 90px;
+		float: right;
+		
+		.ant-menu-item-active, 
+		.ant-menu-item-selected, 
+		.ant-menu-item:hover {
+			border-bottom: 0;
+		}
+
+		a {
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.container {
+	padding: 0 2rem;
+	width: 1440px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.main-header {
+	background-color: transparent;
+  height: 90px;
+  border-bottom: 1px solid #5e6675;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.main-content {
+	margin-top: 240px;
+	color: #ffffff;
+	position: relative;
+}
