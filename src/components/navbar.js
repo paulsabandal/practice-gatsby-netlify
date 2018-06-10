@@ -6,7 +6,7 @@ import './navbar.scss';
 const Navbar = () => (
   <div className="navbar">
     <div className="logo">
-      <img src="/assets/logo/logo-white.png" />
+      <img src="assets/logo/logo-white.png" />
     </div>
     <Menu
       mode="horizontal"
