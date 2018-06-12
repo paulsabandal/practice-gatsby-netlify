@@ -1,5 +1,32 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+
 .navbar {
 	height: 90px;
+	
+	&.scrolled {
+		background: $white;
+		.logo-plain {
+			display: block;
+		}
+		.logo-white {
+			display: none;
+		}
+		.nav a {
+			color: $black;
+			text-transform: uppercase;
+		}
+	}
+
+	&.unscrolled {
+		.logo-plain {
+			display: none;
+		}
+		.logo-white {
+			display: block;
+		}
+	}
+
 	.logo {
 	  margin: 8px;
 	  float: left;
@@ -11,7 +38,8 @@
 		border-bottom: none;
 		line-height: 90px;
 		float: right;
-		
+
+
 		.ant-menu-item-active, 
 		.ant-menu-item-selected, 
 		.ant-menu-item:hover {
@@ -19,7 +47,7 @@
 		}
 
 		a {
-			color: #ffffff;
+			color: $white;
 			text-transform: uppercase;
 		}
 	}

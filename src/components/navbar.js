@@ -1,13 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Menu } from 'antd'
-import Logo from '../images/logo/logo-white.png';
+import LogoWhite from '../images/logo/logo-white.png';
+import Logo from '../images/logo/logo.png';
 import './navbar.scss'
 
 const Navbar = () => (
-  <div className="navbar container">
+  <div className="navbar container unscrolled">
     <div className="logo">
-      <img src={Logo} />
+      <img src={LogoWhite} className="logo-white" />
+      <img src={Logo} className="logo-plain" />
     </div>
     <Menu
       mode="horizontal"
