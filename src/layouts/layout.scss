@@ -1,21 +1,90 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+@import "src/styles/overrides";
+
 .container {
 	padding: 0 2rem;
 	width: 1440px;
 	margin: 0 auto;
 	max-width: 100%;
+  @include for-tablet-portrait-up {
+		padding: 0 3rem;
+  }
 }
 
 .main-header {
 	background-color: transparent;
-  height: 90px;
-  border-bottom: 1px solid #5e6675;
+  border-bottom: 1px solid $dark-grey;
   position: fixed;
   z-index: 1;
+  height: 90px;
   width: 100%;
+  padding: 0;
 }
 
-.main-content {
-	margin-top: 240px;
-	color: #ffffff;
+
+.dark-section {
+	padding: 80px 0;
+	background: $hut8-dark;
+	.title {
+		font-size: 2.25rem;
+	}
+}
+
+.plain-section {
+	padding: 80px 0;
+	background: $white;
+
+}
+
+.title {
+	font-size: 2.25rem;
+}
+
+.title-divider {	
+  border-bottom-style: solid;
+  border-color: $hut8-teal;
+  border-bottom-width: 1px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 10%;
+  &.align-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-pages {
 	position: relative;
+}
+
+.section-triangle {
+	position: relative;
+	.section-triangle-color {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		content: '';
+		width: 0;
+		height: 0;
+		z-index: 99;
+		border-style: solid;
+		margin-left: -16px;
+		border-width: 16px 16px 0 16px;
+		border-color: #2b3342 transparent transparent transparent;
+	}
+}
+
+
+// Utilities
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
 }

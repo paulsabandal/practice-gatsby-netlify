@@ -5,7 +5,7 @@ import Logo from '../images/logo/logo-white.png';
 import './navbar.scss'
 
 const Navbar = () => (
-  <div className="navbar">
+  <div className="navbar container">
     <div className="logo">
       <img src={Logo} />
     </div>

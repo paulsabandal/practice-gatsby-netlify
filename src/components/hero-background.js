@@ -27,7 +27,7 @@ const HeroBackground = ({ siteTitle }) => (
             },
           },
           "opacity": {
-            "value": 0.5,
+            "value": 1,
             "random": true,
             "anim": {
               "enable": false,
@@ -55,7 +55,7 @@ const HeroBackground = ({ siteTitle }) => (
           },
           "move": {
             "enable": true,
-            "speed": 5,
+            "speed": 3,
             "direction": "none",
             "random": false,
             "straight": false,

@@ -1,0 +1,82 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+
+.hero-content {
+	margin: 250px auto;
+	text-align: center;
+	color: $hut8-teal;
+	.title {
+		font-size: 3.5rem;
+		letter-spacing: 3px;
+		color: $hut8-teal;
+	}
+	.sub-title {
+		font-weight: 300;
+		font-size: 1.25rem;
+	}
+}
+
+.bitfury {
+	background: #eceef3;
+	padding-top: 140px;
+
+	.in-partnership {
+		padding-bottom: 60px;
+	}
+
+	.description {
+		color: $dim-grey;
+		font-size: 1.25rem;
+		padding: 64px 0 24px;
+	}
+	
+	h1 {
+		font-size: 2.25rem;
+	}
+}
+
+.hut8-video {
+	.title {
+		margin-bottom: 64px;
+		font-size: 2.25rem;
+		color: $white;
+	}
+
+	iframe {
+		width: 100%;
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border: none;
+	}
+}
+
+.blockbox-innovation {
+	background: #d0d0d0;
+	.title {
+		color: $dim-grey;
+		font-size: 2.25rem;
+	}
+	.description {
+    font-size: .875rem;
+    line-height: 1.75rem;
+    padding-bottom: 24px;
+	}
+}
+
+.testimonials {
+	padding-top: 160px;
+	padding-bottom: 160px;
+	.testimonial {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.said-by {
+		font-family: 'Montserrat', sans-serif;
+		padding-bottom: 48px;
+	}
+}

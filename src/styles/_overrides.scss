@@ -1,0 +1,18 @@
+.ant-btn-primary {
+	color: $hut8-dark !important;
+  background-color: $hut8-teal !important;
+  border-color: $hut8-teal !important;
+  padding: 8px 64px !important;
+  height: auto !important;
+  box-shadow: 0px 1px 1px 0px #b5b5b5;
+}
+
+
+// carousel 
+.ant-carousel .slick-dots li.slick-active button {
+	background: $hut8-dark !important;
+}
+
+.ant-carousel .slick-dots li button {
+	background: $silver !important;
+}

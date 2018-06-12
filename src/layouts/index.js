@@ -19,14 +19,13 @@ const App = ({ children, data }) => (
       ]}
     />
     <Layout>
-
       <Header className="main-header">
         <Navbar />
       </Header>
       <Content>
         <HeroBackground />
         <Layout>
-          <Content className="container main-content">
+          <Content className="main-pages">
             {children()} 
           </Content>
         </Layout>
