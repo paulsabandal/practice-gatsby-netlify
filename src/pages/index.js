@@ -1,65 +1,70 @@
 import React, { Component } from 'react'
-import { Button, Row, Col, Carousel } from 'antd'
+import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
 import './index.scss';
 import BitFury from '../images/index/bitfury.png';
 import BlockBox from '../images/index/blockbox.png';
 import InvestorAdvantage from '../images/index/investor-advantage.png'
 
+const newsContent = [];
+const news = [
+  {"day": "19", "month": "Mar", "title": "Hut 8 Mining Corp. Announces Electricity Supply Agreement with City of Medicine Hat", "content": "Vancouver, British Columbia, March 19, 2018 – Hut 8 Mining Corp. (TSXV: HUT) (“Hut 8” or the “Company”), is pleased to announce today."},
+  {"day": "18", "month": "Mar", "title": "Hut 8 Mining Corp. Announces Appointment of Andrew Kiguel as President and Chief Executive Officer and Director", "content": "VANCOUVER, British Columbia–(BUSINESS WIRE)–Hut 8 Mining Corp. (TSXV:HUT) (“Hut 8” or the “Company”) is pleased to announce, subject to final acceptance by the.."},
+  {"day": "10", "month": "Mar", "title": "Hut 8 Commences Trading on TSXV, Currently World’s Largest Publicly Traded Cryptocurrency Miner", "content": "VANCOUVER, British Columbia–(BUSINESS WIRE)–Mar. 6, 2018– Hut 8 Mining Corp.(TSX.V:HUT) (“Hut 8” or the “Company”) announced today that its common shares have begun trading.."},
+];
+
+const FormItem = Form.Item;
+
+for (let i = 0; i < news.length; i++) {
+  newsContent.push (
+    <Col className="news-item" md={8}>
+      <Row gutter={48}>
+        <Col md={4}>
+          <div className="date">
+            <div className="day">{ news[i].day }</div>
+            <div className="month">{ news[i].month }</div>
+          </div>
+        </Col>
+        <Col md={20}>
+          <div className="content">
+            <div className="title">
+              { news[i].title }
+            </div>
+            <div className="details">
+              <p>{ news[i].content }</p>
+            </div>
+            <div className="link">
+              <Link to="/">Read More <Icon type="arrow-right" /></Link>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Col>
+  )
+}
+
 
 class IndexPage extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { isMobileMenuOpen: false, hasHash: false };
-    this.handleScroll = this.handleScroll.bind(this);
-    this.stateMenuClick = this.stateMenuClick.bind(this);
   }
 
   componentDidMount() {
-    // add listener for scroll event
-    const hashParts = window.location.hash.split("#");
-
-    if (hashParts.length > 1) {
-      this.state.hasHash = true;
-
-      const hash = hashParts[1];
-      let el = document
-        .querySelector(`#${hash}`)
-        .scrollIntoView({ behavior: "instant" });
-    }
-
-    document.addEventListener("scroll", this.handleScroll, false);
-
-    // document.addEventListener('scroll', this.addMenuActiveState, false)
-  }
-
-  stateMenuClick() {
-    this.state.hasHash = true;
-  }
-
-  handleScroll() {
-    const navHeight = document.querySelector(".navbar");
-    const headerHeight = document.querySelector(".main-header");
-
-    if (window.scrollY > 200) {
-      navHeight.classList.add("scrolled");
-      navHeight.classList.remove("unscrolled");
-      headerHeight.classList.add("scrolled");
-      headerHeight.classList.remove("unscrolled");
-    } else {
-      navHeight.classList.add("unscrolled");
-      navHeight.classList.remove("scrolled");
-      headerHeight.classList.add("unscrolled");
-      headerHeight.classList.remove("scrolled");
-    }
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("scroll", this.handleScroll, false);
+    this.props.form.validateFields();
   }
 
   render() {
+    const { getFieldDecorator } = this.props.form;
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 24 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 24 },
+      },
+    };
     return (
       <div>
         <section className="container hero-content">
@@ -75,7 +80,6 @@ class IndexPage extends Component {
         <section className="section-triangle">
           <div className="section-triangle-color" />
         </section>
-
         <section className="plain-section bitfury">
           <div className="container text-center">
             <h1>
@@ -93,7 +97,6 @@ class IndexPage extends Component {
             <Button type="primary">About Us</Button>
           </div>
         </section>
-
         <section className="hut8-video dark-section">
           <div className="container text-center">
             <h1 className="title">Watch Our Video</h1>
@@ -107,7 +110,6 @@ class IndexPage extends Component {
             />
           </div>
         </section>
-
         <section className="blockbox-innovation dark-section">
           <div className="container">
             <Row gutter={16}>
@@ -130,7 +132,6 @@ class IndexPage extends Component {
             </Row>
           </div>
         </section>
-
         <section className="testimonials plain-section">
           <div className="container text-center">
             <h1 className="title">Global Leaders on Cryptocurrency</h1>
@@ -179,7 +180,6 @@ class IndexPage extends Component {
             </Row>
           </div>
         </section>
-
         <section className="blockbox-innovation dark-section">
           <div className="container">
             <Row gutter={16}>
@@ -196,8 +196,76 @@ class IndexPage extends Component {
                 </p>
                 <Button type="primary">Investors</Button>
               </Col>
-              <Col md={12}>
+              <Col md={12} className="text-center">
                 <img src={InvestorAdvantage} />
+              </Col>
+            </Row>
+          </div>
+        </section>
+        <section className="cryptocurrency-rates dark-section">
+          <div className="container">
+            <Row gutter={16}>
+              <Col md={24}>
+                Test
+              </Col>
+            </Row>
+          </div>
+        </section>
+        <section className="latest-news plain-section">
+          <div className="container text-center">
+            <h1 className="title">Latest News</h1>
+            <div className="title-divider align-center" />
+          </div>
+          <div className="container">
+            <Row gutter={16} className="news">
+              { newsContent }
+            </Row>
+          </div>
+        </section>
+        <section className="subscribe-news dark-section">
+          <div className="container">
+            <Row gutter={16} type="flex" justify="center" align="middle">
+              <Col md={4}>
+                <p className="title">Get the latest news</p>
+              </Col>
+              <Col md={18}>
+                <Form layout="inline" onSubmit={this.handleSubmit}>
+                  <FormItem
+                    wrapperCol={{ span: 24 }}
+                    className="subscription-input"
+                  >
+                    {getFieldDecorator('email', {
+                      rules: [{ required: false, message: 'Please input your email!' }],
+                    })(
+                      <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" size="large" />
+                    )}
+                  </FormItem>
+                  <FormItem wrapperCol={{ span: 24 }}>
+                    <Button
+                      size="large"
+                      type="default"
+                      htmlType="submit"
+                    >
+                      Log in
+                    </Button>
+                  </FormItem>
+                </Form>
+              </Col>
+            </Row>
+          </div>
+        </section>
+        <section className="first-quarter dark-section">
+          <div className="container text-center">
+            <Row gutter={16}>
+              <Col md={24}>
+                <h1 className="title">Hut 8 Mining’s First Quarter 2018 Report</h1>
+                <p className="description">
+                  Download our First Quarter Report to learn more about the opportunity.
+                </p>
+                <Button type="primary">Download</Button>
+                <p className="description">
+                  For copies of our financial statements and other continuous disclosure filings, please see Hut 8’s profile at SEDAR (System for Electronic Document Analysis and Retrieval) by clicking HERE.
+                </p>
               </Col>
             </Row>
           </div>
@@ -206,5 +274,6 @@ class IndexPage extends Component {
     );
   }
 }
-export default IndexPage;
+export default Form.create()(IndexPage)
+
 

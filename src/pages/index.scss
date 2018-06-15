@@ -80,3 +80,72 @@
 		padding-bottom: 48px;
 	}
 }
+
+.news {
+	margin-top: 80px;
+}
+
+.news-item {
+	.date {
+		background: #f4f4f4;
+    color: #666;
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+	}
+	.month {
+    background: #666;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+    color: #fff;
+	}
+	.title {
+		font-size: 20px;
+		margin-bottom: 20px;
+		color: $dim-grey;
+		max-width: 280px;
+	}
+	.details {
+		font-size: 14px;
+		line-height: 2;
+	}
+	.link a {
+		color: #00b290;
+		font-size: 14px;
+	}
+}
+ 	
+.subscribe-news {
+	background: $hut8-teal;
+	padding: 40px 0;
+	.title {
+		color: $black;
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+	.ant-form-inline .subscription-input {
+    max-width: 600px;
+    display: inline;
+    float: left;
+    width: 100%;
+	}
+	.ant-input {
+		border-radius: 0;
+		border: 1px solid $black;
+	}
+}
+
+.first-quarter {
+	.description {
+		padding: 32px 0;
+		color: $white;
+	}
+}
