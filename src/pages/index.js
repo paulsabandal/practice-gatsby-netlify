@@ -228,7 +228,7 @@ class IndexPage extends Component {
               <Col md={4}>
                 <p className="title">Get the latest news</p>
               </Col>
-              <Col md={18}>
+              <Col md={16}>
                 <Form layout="inline" onSubmit={this.handleSubmit}>
                   <FormItem
                     wrapperCol={{ span: 24 }}
@@ -237,7 +237,7 @@ class IndexPage extends Component {
                     {getFieldDecorator('email', {
                       rules: [{ required: false, message: 'Please input your email!' }],
                     })(
-                      <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" size="large" />
+                      <Input placeholder="Email Address" size="large" />
                     )}
                   </FormItem>
                   <FormItem wrapperCol={{ span: 24 }}>
@@ -245,8 +245,9 @@ class IndexPage extends Component {
                       size="large"
                       type="default"
                       htmlType="submit"
+                      className="subscription-btn"
                     >
-                      Log in
+                      Submit
                     </Button>
                   </FormItem>
                 </Form>
@@ -262,7 +263,7 @@ class IndexPage extends Component {
                 <p className="description">
                   Download our First Quarter Report to learn more about the opportunity.
                 </p>
-                <Button type="primary">Download</Button>
+                <Button type="primary">DOWNLOAD</Button>
                 <p className="description">
                   For copies of our financial statements and other continuous disclosure filings, please see Hut 8’s profile at SEDAR (System for Electronic Document Analysis and Retrieval) by clicking HERE.
                 </p>

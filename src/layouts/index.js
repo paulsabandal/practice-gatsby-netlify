@@ -4,10 +4,11 @@ import Helmet from 'react-helmet'
 import { Layout } from 'antd'
 import Navbar from '../components/navbar'
 import HeroBackground from '../components/hero-background'
+import Footer from '../components/footer/'
 import './index.css'
 import './layout.scss';
 
-const { Footer, Sider, Content, Header } = Layout;
+const { Sider, Content, Header } = Layout;
 
 const App = ({ children, data }) => (   
   <div>
@@ -30,7 +31,7 @@ const App = ({ children, data }) => (
           </Content>
         </Layout>
       </Content>
-      <Footer>Footer</Footer>
+      <Footer />
     </Layout>
   </div>
 )

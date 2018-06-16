@@ -7141,6 +7141,10 @@ react-slick@~0.23.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
+react-tradingview-wrapper@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/react-tradingview-wrapper/-/react-tradingview-wrapper-1.0.15.tgz#badd1845ac27f8d6f7ecdf191c53a80a478cf4dc"
+
 react@^15.6.0:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
