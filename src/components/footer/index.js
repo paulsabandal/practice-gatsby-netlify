@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import { Menu, List, Row, Col, Icon } from 'antd'
-import TradingView from 'react-tradingview-wrapper'
 import Helmet from 'react-helmet'
 
 import './footer.scss'
