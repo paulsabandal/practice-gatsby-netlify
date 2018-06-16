@@ -22,6 +22,8 @@ class Footer extends Component {
       tvScript.async = true;
 
       tradingViewContainer.appendChild(tvScript);
+
+      const coinMarketCapData = "https://api.coinmarketcap.com/v2/ticker/";
   }
 
   render() {

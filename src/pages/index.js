@@ -13,8 +13,6 @@ const news = [
   {"day": "10", "month": "Mar", "title": "Hut 8 Commences Trading on TSXV, Currently World’s Largest Publicly Traded Cryptocurrency Miner", "content": "VANCOUVER, British Columbia–(BUSINESS WIRE)–Mar. 6, 2018– Hut 8 Mining Corp.(TSX.V:HUT) (“Hut 8” or the “Company”) announced today that its common shares have begun trading.."},
 ];
 
-const FormItem = Form.Item;
-
 for (let i = 0; i < news.length; i++) {
   newsContent.push (
     <Col className="news-item" md={8}>
@@ -43,14 +41,28 @@ for (let i = 0; i < news.length; i++) {
   )
 }
 
+const coinList = [];
+
+const FormItem = Form.Item;
 
 class IndexPage extends Component {
   constructor(props) {
     super(props);
+    this.state = { coinMarketCapdata: [] }
+  }
+
+  loadData() {
+    fetch('https://api.coinmarketcap.com/v2/ticker/?limit=10')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({coinMarketCapdata: data.data })
+    })
+      .catch(err => console.error(this.props.url, err.toString()))
   }
 
   componentDidMount() {
     this.props.form.validateFields();
+    this.loadData()
   }
 
   render() {
@@ -65,6 +77,9 @@ class IndexPage extends Component {
         sm: { span: 24 },
       },
     };
+
+    console.log(this.state.coinMarketCapdata);
+
     return (
       <div>
         <section className="container hero-content">
@@ -206,7 +221,9 @@ class IndexPage extends Component {
           <div className="container">
             <Row gutter={16}>
               <Col md={24}>
-                Test
+                <ul>
+                  
+                </ul>
               </Col>
             </Row>
           </div>
