@@ -2,11 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Investors = () => (
-  <div>
-    <h1>Investors</h1>
-    <p>My money's in that office, right? If she start giving me some bullshit Investors it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you.</p> 
-    <Link to="/">Go to page 2</Link>
-  </div>
+  <section className="container hero-content">
+    <h1 className="title">
+      Maximizing Long-Term <br /> Shareholder Value 
+    </h1>
+    <p className="sub-title">
+      Accelerating Development Of Blockchain Through Traditional Capital Markets.
+    </p>
+  </section>
 )
 
 export default Investors

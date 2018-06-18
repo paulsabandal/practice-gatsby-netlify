@@ -1,15 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Projects = () => (
+const Corporate = () => (
   <section className="container hero-content">
     <h1 className="title">
-      Leading Blockchain <br /> Infrastructure Company 
+      Finance & Technology <br /> Industry Experts 
     </h1>
     <p className="sub-title">
-      Leading Edge Data Centers Mining Cryptocurrencies Around The Clock.
+      Global Business, Technology and Financial Expertise.
     </p>
   </section>
 )
 
-export default Projects
+export default Corporate
