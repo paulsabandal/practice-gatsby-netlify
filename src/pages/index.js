@@ -6,6 +6,13 @@ import BitFury from '../images/index/bitfury.png';
 import BlockBox from '../images/index/blockbox.png';
 import InvestorAdvantage from '../images/index/investor-advantage.png'
 
+const svgs = require.context('../images/index/cryptologos/', true, /\.svg$/)
+const svgsObj = svgs.keys()
+  .reduce((images, key) => {
+    images[key] = svgs(key)
+    return images
+  }, {})
+
 const newsContent = [];
 const news = [
   {"day": "19", "month": "Mar", "title": "Hut 8 Mining Corp. Announces Electricity Supply Agreement with City of Medicine Hat", "content": "Vancouver, British Columbia, March 19, 2018 – Hut 8 Mining Corp. (TSXV: HUT) (“Hut 8” or the “Company”), is pleased to announce today."},
@@ -52,7 +59,7 @@ class IndexPage extends Component {
   }
 
   loadData() {
-    fetch('https://api.coinmarketcap.com/v2/ticker/?limit=10')
+    fetch('https://api.coinmarketcap.com/v2/ticker/?limit=8')
       .then(response => response.json())
       .then(data => {
         this.setState({coinMarketCapdata: data.data })
@@ -78,7 +85,16 @@ class IndexPage extends Component {
       },
     };
 
-    console.log(this.state.coinMarketCapdata);
+    const coinMarketFetchedData = this.state.coinMarketCapdata;
+
+    const listCoins = Object.keys(coinMarketFetchedData).map((item, index) =>
+      <li key={index}>
+        <span><img src={ svgsObj[ "./" + coinMarketFetchedData[item].symbol.toLowerCase() + ".svg" ] } /></span>
+        <span className="coin-name">{coinMarketFetchedData[item].name} ({ coinMarketFetchedData[item].symbol })</span>
+        <span className="coin-price">${coinMarketFetchedData[item].quotes.USD.price}</span>
+        <span className={ "coin-status" + coinMarketFetchedData[item].quotes.USD.percent_change_1h < 0 ? "coin-down": "coin-up"}>{coinMarketFetchedData[item].quotes.USD.percent_change_1h}%</span>
+      </li>
+    );
 
     return (
       <div>
@@ -219,14 +235,16 @@ class IndexPage extends Component {
         </section>
         <section className="cryptocurrency-rates dark-section">
           <div className="container">
-            <Row gutter={16}>
-              <Col md={24}>
-                <ul>
-                  
-                </ul>
-              </Col>
-            </Row>
+            <h3 className="title">Current Cryptocurrency Exchange Rates</h3>
+            <div className="title-divider align-center" />
           </div>
+          <Row gutter={16}>
+            <Col md={24}>
+              <ul className="coinList">
+                {listCoins}
+              </ul>
+            </Col>
+          </Row>
         </section>
         <section className="latest-news plain-section">
           <div className="container text-center">

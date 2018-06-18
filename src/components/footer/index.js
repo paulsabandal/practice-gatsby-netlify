@@ -17,7 +17,7 @@ class Footer extends Component {
       const tradingViewContainer = document.querySelector(".tradingview-widget-container");
       
       tvScript.src = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js";
-      tvScript.innerHTML = '{ "locale": "en", "symbol": "TSXV:HUT" , "width": 350 }';
+      tvScript.innerHTML = '{ "locale": "en", "symbol": ["TSXV:HUT"] , "width": 350 }';
       tvScript.async = true;
 
       tradingViewContainer.appendChild(tvScript);

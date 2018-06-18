@@ -149,6 +149,76 @@
 	}
 }
 
+.cryptocurrency-rates {
+	.title {
+		font-family: 'Montserrat', sans-serif;
+		color: $hut8-teal;
+		font-size: 1.5rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	.coinList {
+	 color: $white;
+	 list-style: none;
+	 width: 2500px;
+	 margin-top: 24px;
+
+		/* Starting position */
+	 -moz-transform:translateX(100%);
+	 -webkit-transform:translateX(100%);	
+	 transform:translateX(100%);
+	 /* Apply animation to this element */	
+	 -moz-animation: marquee 40s linear infinite;
+	 -webkit-animation: marquee 40s linear infinite;
+	 animation: marquee 40s linear infinite;
+
+	 li {
+	 	display: inline;
+	 	font-size: 14px;
+	 	padding-right: 48px;
+
+	 	img {
+	 		padding-right: 16px;
+	 	}
+
+	 	.coin-name {
+	 		padding-right: 8px;
+	 	}
+	 	.coin-down, .coin-up {
+	 		padding-left: 8px;
+	 		font-size: 11px;
+	 	}
+
+	 	.coin-up { 
+	 		color: $success;
+	 	}
+	 }
+	}
+
+	/* Move it (define the animation) */
+	@-moz-keyframes marquee {
+	 0%   { -moz-transform: translateX(100%); }
+	 100% { -moz-transform: translateX(-100%); }
+	}
+	@-webkit-keyframes marquee {
+	 0%   { -webkit-transform: translateX(100%); }
+	 100% { -webkit-transform: translateX(-100%); }
+	}
+	@keyframes marquee {
+		 0%   { 
+		 	-moz-transform: translateX(100%); /* Firefox bug fix */
+		 	-webkit-transform: translateX(100%); /* Firefox bug fix */
+		 	transform: translateX(100%); 		
+		 }
+		 100% { 
+		 	-moz-transform: translateX(-100%); /* Firefox bug fix */
+		 	-webkit-transform: translateX(-100%); /* Firefox bug fix */
+		 	transform: translateX(-100%); 
+		 }
+	}
+}
+
 .first-quarter {
 	.description {
 		padding: 32px 0;
