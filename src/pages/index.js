@@ -100,8 +100,7 @@ class IndexPage extends Component {
       <div>
         <section className="container hero-content">
           <h1 className="title">
-            {" "}
-            Global Cryptocurrency <br /> Mining Leadership{" "}
+            Global Cryptocurrency <br /> Mining Leadership
           </h1>
           <p className="sub-title">
             Establishing North America’s Largest Cryptocurrency Mining Data

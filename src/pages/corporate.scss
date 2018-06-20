@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+
+.about-pictures {
+	padding-bottom: 0;
+	img {
+		width: 100%;
+	}
+}
+
+
+.about-count {
+	h2 {
+		font-size: 3rem;
+		font-family: 'Montserrat', sans-serif;
+		line-height: 1;
+
+		small {
+			font-size: 1rem;
+			font-family: 'Do Hyeon', sans-serif;
+		}
+	}
+}
+
+.about-bitfury-group {
+	height: 80vh;
+	background-size: cover;
+	background-image: url('../images/corporate/bitfury2-blackwhite.jpeg');
+  background-color: #404856;
+  background-blend-mode: multiply;
+
+  .bitfury-logo {
+  	padding-top: 48px;
+  	padding-bottom: 80px;
+  }
+
+  .description {
+  	color: $white;
+  }
+
+  .sub-title {
+  	padding-top: 48px;
+  	font-size: 1.75rem;
+  }
+}
