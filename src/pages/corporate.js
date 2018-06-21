@@ -82,6 +82,9 @@ class Corporate extends Component {
 			      Global Business, Technology and Financial Expertise.
 			    </p>
 			  </section>
+        <section className="section-triangle">
+          <div className="section-triangle-color" />
+        </section>
 			  <section className="what-is-hut8 plain-section">
 			    <div className="container text-center">
 			      <h1 className="title">What’s behind the name “Hut 8”?</h1>

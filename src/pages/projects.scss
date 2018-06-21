@@ -1,0 +1,50 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+
+.state-of-the-art {
+	.subtitle {
+		padding-top: 32px;
+		padding-bottom: 16px;
+		font-size: 24px;
+	}
+
+	.list{
+		font-size: 14px;
+		line-height: 2;
+	}
+}
+.blockbox-ac{	
+	padding: 32px;
+	img {
+		width: 100%;
+	}
+}
+
+.blockbox-benefits {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.ant-row-flex {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+
+	.icon-image {
+		text-align: center;
+		padding-bottom: 48px;
+	}
+	.anticon{
+		font-size: 3em;
+		padding: 48px;
+		color: $dim-grey;
+	}
+	.heading {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		padding-bottom: 16px;
+		text-align: center;
+	}
+	.content {
+		font-size: 14px;
+		line-height: 2;
+	}
+}
