@@ -7,8 +7,6 @@
 		width: 100%;
 	}
 }
-
-
 .about-count {
 	h2 {
 		font-size: 3rem;
@@ -43,3 +41,90 @@
   	font-size: 1.75rem;
   }
 }
+
+
+.member-thumbnail {
+	padding: 48px;
+
+	.photo-holder {
+		width: 100%;
+	}
+	.details {
+		padding-top: 24px;
+		.divider {
+	    border-top: 1px solid #eeee;
+	    margin-bottom: 24px;
+		}
+		.person, .position  {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 14px;
+			color: $dim-grey;
+		}
+		.person {
+			font-weight: 700;
+		}
+		.position {
+			font-weight: 300;
+		}
+		.bio {
+			font-size: 14px;	
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.leadership-thoughts {
+	background: $hut8-teal;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.testimonial {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.said-by {
+		font-family: 'Montserrat', sans-serif;
+		padding-bottom: 48px;
+	}
+}
+
+.mission-vision {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	.ant-row-flex {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.anticon{
+		font-size: 3em;
+		padding: 48px;
+		color: $dim-grey;
+	}
+	.heading {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		padding-bottom: 16px;
+	}
+	.content {
+		font-size: 14px;
+		line-height: 2;
+	}
+}
+
+.download-investors-package {
+	padding-top: 80px;
+	padding-bottom: 120px;
+	color: $white;
+	.title {
+		padding-bottom: 20px;
+	}
+	.links {
+		padding-top: 120px;
+	}
+	a {
+		color: $hut8-teal;
+	}
+}
+
