@@ -1,35 +1,27 @@
 @import "src/styles/colors";
 @import "src/styles/devices";
 
-.state-of-the-art {
-	.subtitle {
-		padding-top: 32px;
-		padding-bottom: 16px;
-		font-size: 24px;
-	}
-
-	.list{
-		font-size: 14px;
-		line-height: 2;
-	}
-}
-.blockbox-ac{	
-	padding: 32px;
-	img {
-		width: 100%;
-	}
-}
-
-.blockbox-benefits, .our-approach {
+.what-they-said {
+	background: $white;
 	padding-top: 80px;
 	padding-bottom: 80px;
-
-	&.dark-section {
-		color: $white;
-		.heading {
-			color: $white;
-		}
+	.testimonial {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		padding-top: 48px;
+		padding-bottom: 48px;
 	}
+	.said-by {
+		font-family: 'Montserrat', sans-serif;
+		padding-bottom: 48px;
+	}
+}
+
+
+.why-invest-benefits, .our-approach {
+	padding-top: 80px;
+	padding-bottom: 80px;
 
 	.ant-row-flex {
 		padding-top: 48px;
@@ -63,17 +55,59 @@
 	}
 }
 
-.project-1, .project-2 {
-	.content {
-		padding: 24px 0;
-		font-size: 0.825rem;
-		line-height: 2;
-	}
-}
 
 .why-choose-alberta {
 	color: $hut8-teal;
 	.title {
 		color: $hut8-teal;
+	}
+}
+
+.key-investment {
+	color: $white;
+	.icon-title {
+		padding-top: 64px;
+		text-align: center;
+		img {
+			padding-bottom: 24px;
+		}
+		.heading {
+			color: $white;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+		}
+	}
+
+	.content {
+		font-size: 14px;
+		padding: 24px;
+		ul {
+			padding-left: 0;
+			line-height: 2;
+		}
+	}
+}
+
+.faq {
+	.ant-collapse {
+		font-family: 'Montserrat', sans-serif;
+		.ant-collapse-header {
+			text-transform: uppercase;
+			padding: 24px 0 24px 40px;
+			font-weight: 700;
+			.arrow {
+				top: 12px;
+			}
+		}
+	}
+	.link-to-contact {
+		padding-top: 64px;
+		h3 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+		}
+		.contact-us-btn {
+			margin-top: 32px;
+		}
 	}
 }
