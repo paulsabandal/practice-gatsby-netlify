@@ -2,9 +2,13 @@
 @import "src/styles/devices";
 
 .hero-content {
-	margin: 250px auto;
 	text-align: center;
 	color: $hut8-teal;
+	display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 95vh;
 	.title {
 		font-size: 3.5rem;
 		letter-spacing: 3px;

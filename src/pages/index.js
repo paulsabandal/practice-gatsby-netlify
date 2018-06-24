@@ -98,14 +98,16 @@ class IndexPage extends Component {
 
     return (
       <div>
-        <section className="container hero-content">
-          <h1 className="title">
-            Global Cryptocurrency <br /> Mining Leadership
-          </h1>
-          <p className="sub-title">
-            Establishing North America’s Largest Cryptocurrency Mining Data
-            Centers.
-          </p>
+        <section className="container">
+        	<div className="hero-content">
+	          <h1 className="title">
+	            Global Cryptocurrency <br /> Mining Leadership
+	          </h1>
+	          <p className="sub-title">
+	            Establishing North America’s Largest Cryptocurrency Mining Data
+	            Centers.
+	          </p>
+          </div>
         </section>
         <section className="section-triangle">
           <div className="section-triangle-color" />

@@ -120,7 +120,9 @@ class Investors extends Component {
             Accelerating Development Of Blockchain Through Traditional Capital Markets.
           </p>
         </section>
-
+        <section className="section-triangle">
+          <div className="section-triangle-color" />
+        </section>
         <section className="why-invest-benefits plain-section">
           <div className="container">
             <h1 className="title text-center">Why invest in Hut8 Mining Corp?</h1>

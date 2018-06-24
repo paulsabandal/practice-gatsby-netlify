@@ -1,0 +1,35 @@
+@import "src/styles/colors";
+@import "src/styles/devices";
+
+.contact-heading {
+	font-size: 1.5rem;
+	margin-bottom: 48px;
+	.description {
+		font-size: 0.85rem;
+		line-height: 2;
+	}
+}
+
+.contact-form {
+	.ant-form-item-label{
+		text-align: left;
+	}
+
+	.ant-input {
+    border-radius: 0;
+    border: 1px solid #1b1b1b;
+  }
+}
+
+.contact-list {
+  li, a {
+    list-style: none;
+    color: $hut8-teal;
+    .anticon {
+      font-size: 14px;
+      color: $grey;
+      padding-right: 24px;
+      line-height: inherit;
+    }
+ 	}
+}
