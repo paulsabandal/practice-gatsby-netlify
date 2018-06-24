@@ -95,9 +95,13 @@
 			text-transform: uppercase;
 			padding: 24px 0 24px 40px;
 			font-weight: 700;
+			font-size: 0.875rem;
 			.arrow {
 				top: 12px;
 			}
+		}
+		.ant-collapse-content-box {
+			line-height: 2;
 		}
 	}
 	.link-to-contact {

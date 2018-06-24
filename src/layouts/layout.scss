@@ -26,6 +26,10 @@
 		box-shadow: 0 0 2px 1px rgba(0,0,0,.16);
 		border-bottom: 0;
 	}
+
+	&.opaque-true {
+		border-bottom: 0;
+	}	
 }
 
 
@@ -111,4 +115,8 @@
 		border: 0;
 		border-top: 1px solid $pale-grey;
 	}
+}
+
+.no-particles {
+	padding-top: 250px;
 }

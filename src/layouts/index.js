@@ -11,6 +11,7 @@ import './layout.scss';
 const { Sider, Content, Header } = Layout;
 
 const App = ({ children, data }) => (   
+
   <div>
     <Helmet
       title={data.site.siteMetadata.title}

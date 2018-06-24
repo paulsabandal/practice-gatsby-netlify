@@ -16,19 +16,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     // add listener for scroll event
-    const hashParts = window.location.hash.split("#");
-
-    if (hashParts.length > 1) {
-      this.state.hasHash = true;
-
-      const hash = hashParts[1];
-      let el = document
-        .querySelector(`#${hash}`)
-        .scrollIntoView({ behavior: "instant" });
-    }
-
     document.addEventListener("scroll", this.handleScroll, false);
-
     // document.addEventListener('scroll', this.addMenuActiveState, false)
   }
 
@@ -56,9 +44,13 @@ class Navbar extends Component {
   componentWillUnmount() {
     document.removeEventListener("scroll", this.handleScroll, false);
   }
+
   render() {
+    let pathName = window.location.pathname;
+    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
+
     return (
-      <div className="navbar container unscrolled">
+      <div className={"navbar container unscrolled " + OpaqueNav}>
         <div className="logo">
           <img src={LogoWhite} className="logo-white" />
           <img src={Logo} className="logo-plain" />

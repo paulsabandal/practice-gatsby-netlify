@@ -4,7 +4,16 @@
 .navbar {
 	height: 90px;
 	
-	&.scrolled {
+	&.unscrolled {
+		.logo-plain {
+			display: none;
+		}
+		.logo-white {
+			display: block;
+		}
+	}
+
+	&.scrolled, &.opaque-true {
 		background: $white;
 		.logo-plain {
 			display: block;
@@ -15,15 +24,6 @@
 		.nav a {
 			color: $black;
 			text-transform: uppercase;
-		}
-	}
-
-	&.unscrolled {
-		.logo-plain {
-			display: none;
-		}
-		.logo-white {
-			display: block;
 		}
 	}
 
