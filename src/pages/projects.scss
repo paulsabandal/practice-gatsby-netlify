@@ -20,9 +20,17 @@
 	}
 }
 
-.blockbox-benefits {
+.blockbox-benefits, .our-approach {
 	padding-top: 80px;
 	padding-bottom: 80px;
+
+	&.dark-section {
+		color: $white;
+		.heading {
+			color: $white;
+		}
+	}
+
 	.ant-row-flex {
 		padding-top: 48px;
 		padding-bottom: 48px;
@@ -32,11 +40,17 @@
 		text-align: center;
 		padding-bottom: 48px;
 	}
+
 	.anticon{
 		font-size: 3em;
 		padding: 48px;
 		color: $dim-grey;
 	}
+
+	.svg-icon {
+		width: 64px;
+	}
+	
 	.heading {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
@@ -46,5 +60,20 @@
 	.content {
 		font-size: 14px;
 		line-height: 2;
+	}
+}
+
+.project-1, .project-2 {
+	.content {
+		padding: 24px 0;
+		font-size: 0.825rem;
+		line-height: 2;
+	}
+}
+
+.why-choose-alberta {
+	color: $hut8-teal;
+	.title {
+		color: $hut8-teal;
 	}
 }

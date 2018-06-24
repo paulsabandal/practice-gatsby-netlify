@@ -10,6 +10,10 @@ import Monitoring from '../images/projects/Monitoring.png';
 import Resilience from '../images/projects/resilience.png';
 import Quickstart from '../images/projects/quickstart.png';
 import Portable from '../images/projects/portable.png';
+import ChangeDay from '../images/projects/change-day.svg';
+import hatAlberta from '../images/projects/medicine-hat-alberta.png';
+import drumBeller from '../images/projects/drumheller-alberta.png';
+
 const FormItem = Form.Item;
 class Projects extends Component {
   constructor(props) {
@@ -79,21 +83,21 @@ class Projects extends Component {
 			      <h1 className="title text-center">BlockBoxAC Key Benefits</h1>
 			      <div className="title-divider align-center" />
 		        <Row gutter={48} type="flex" justify="center" align="center">
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={Innovative}/>
 		          	</div>
 		          	<h4 className="heading">Innovation</h4>
 		          	<p className="content">BlockBox AC is based on modern hardware and software manufactured by Bitfury. The basic configuration includes 176 Bitfury B8 servers. Each server houses six hashboards, each contains 96 specialized ASIC bitcoin mining chips. Each BlockBox has over 100,000 ASIC mining chips.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={Monitoring} />
 		          	</div>
 		          	<h4 className="heading">Monitoring</h4>
 		          	<p className="content">The Bitfury BlockBox AC is monitored on-site and remotely using built-in software and/or a mobile app, displaying key performance indicators.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={CuttingEdge} />
 		          	</div>
@@ -102,21 +106,21 @@ class Projects extends Component {
 		          </Col>
 		        </Row>
 		        <Row gutter={48} type="flex" justify="center" align="center">
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={Quickstart}/>
 		          	</div>
 		          	<h4 className="heading">Quick Start</h4>
 		          	<p className="content">It takes two days to install Bitfury BlockBox AC on a properly prepared site.  Once installed, the solution connects to the mining pool, and immediately starts to generate income.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={Portable} />
 		          	</div>
 		          	<h4 className="heading">Modularity</h4>
 		          	<p className="content">Bitfury BlockBox AC is a full-featured, self-contained solution for bitcoin mining, delivered in a 40’ High Cube freight container.  Once installed, no further investments of time, capital, or expertise are required for the solution maintenance.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col md={8} xs={24}>
 		          	<div className="icon-image">	
 		          		<img src={CuttingEdge} />
 		          	</div>
@@ -126,6 +130,106 @@ class Projects extends Component {
 		        </Row>
 			    </div>
 			  </section>
+
+			  <section className="our-approach dark-section">
+			    <div className="container">
+			      <h1 className="title text-center">Our Approach</h1>
+			      <div className="title-divider align-center" />
+		        <Row gutter={48} type="flex" justify="center" align="center">
+		          <Col md={8} xs={24}>
+		          	<div className="icon-image">	
+		          		<img src={ChangeDay} className="svg-icon" />
+		          	</div>
+		          	<h4 className="heading">Phase One; Complete</h4>
+		          	<p className="content">Drumheller Alberta: 17 Bitcoin mining <br /> datacenters representing 18.7 MW / 128 PH/s</p>
+		          </Col>
+		          <Col md={8} xs={24}>
+		          	<div className="icon-image">	
+		          		<img src={ChangeDay} className="svg-icon" />
+		          	</div>
+		          	<h4 className="heading">Phase Two; Operational September 2018</h4>
+		          	<p className="content">Medicine Hat Alberta : 40 Bitcoin mining <br /> datacenters  representing 42 MW / 300 PH/s</p>
+		          </Col>
+		          <Col md={8} xs={24}>
+		          	<div className="icon-image">	
+		          		<img src={ChangeDay} className="svg-icon" />
+		          	</div>
+		          	<h4 className="heading">Aggregate Operations</h4>
+		          	<p className="content">60.7 MW / 428 PH/s – Fully funded </p>
+		          </Col>
+		        </Row>
+		      </div>
+		    </section>
+			  <section className="plain-section project-1">
+          <div className="container text-center">
+            <Row gutter={16} type="flex" justify="center">
+              <Col md={24}>
+                <h1 className="title">Medicine Hat, Alberta Project</h1>
+              </Col>
+              <Col md={24}>
+              	<img src={drumBeller} className="blockbox-ac" />
+              </Col>
+              <Col md={18}>
+              	<p className="content">Medicine Hat, Alberta, a warm, vibrant, feel-good city, with the attitude and natural backdrop to match, will be home to Hut 8 Mining’s newest BlockBox Data Centre. The City offers stable, cost-competitive utility rates and has been welcoming and supportive of Hut 8 Mining’s fast paced growth plans. This partnership, together with the success of Hut 8’s recent capital raising efforts and the provision of land and electricity through CMH, will enable the Company to  service the full complement of 40 BlockBox Data Centers with an aggregate power capacity of approximately 42 MW.</p>
+              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
+		                >  Learn More </Button>
+              </Col>
+            </Row>
+          </div>
+			  </section>
+			  <section className="plain-section divider">
+			  	<div className="container">
+			  		<Row type="flex" justify="center">
+              <Col md={20}>
+              	<hr className="divider" />
+              </Col>
+            </Row>
+          </div>
+			  </section>
+			  <section className="plain-section project-2">
+          <div className="container text-center">
+            <Row gutter={16} type="flex" justify="center">
+              <Col md={24}>
+                <h1 className="title">Drumheller, Alberta Project</h1>
+              </Col>
+              <Col md={24}>
+              	<img src={hatAlberta} className="blockbox-ac" />
+              </Col>
+              <Col md={18}>
+              	<p className="content">Drumheller, Alberta, a popular tourist destination for “Hoodoos”, or tent rocks and dinosaur bones is home to Hut 8 Mining’s first Blockbox Data Centers. Being strategically located in Alberta where electricity costs are low due to an abundance of natural gas power, as well as a year-round cool climate, allows Hut8 Mining to access maximize the performance of the ASIC chips. The facility has 17 BlockBoxAC data centres with an aggregate power capacity of approximately 18.7 MW.</p>
+              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
+		                >  Learn More </Button>
+              </Col>
+            </Row>
+          </div>
+			  </section>
+        <section className="why-choose-alberta dark-section">
+          <div className="container text-center">
+            <Row gutter={16}>
+              <Col md={24}>
+                <h1 className="title">Why Choose Alberta?</h1>
+                <p className="description">
+                	Download a PDF copy of the investor package and learn more about <br />the opportunity, our exclusive partnership with Bitfury Group, and the innovative “BlockBoxAC” containerized data centers.
+                </p>
+             	</Col>
+           	</Row>
+          </div>
+        </section>
+        <section className="download-investors-package dark-section">
+          <div className="container text-center">
+            <Row gutter={16}>
+              <Col md={24}>
+                <h1 className="title">Download Your Investor Package</h1>
+                <p className="description">
+                  Download a PDF copy of the investor package and learn more about <br /> the opportunity, our exclusive partnership with Bitfury Group, and the innovative “BlockBoxAC” containerized data centers.
+                </p>
+                <Button type="primary">DOWNLOAD</Button> 
+                <p className="links">View our <a href="https://www.hut8mining.com">HOME</a>, <a href="https://www.hut8mining.com/corporate">CORPORATE</a>, <a href="https://www.hut8mining.com/investors">INVESTORS</a>, and <a href="https://www.hut8mining.com/news/">NEWS</a> page,</p>
+                <p>or <a href="https://www.hut8mining.com/contact/">CONTACT US</a> for more info.</p>
+              </Col>
+            </Row>
+          </div>
+        </section>
 		    <section className="subscribe-news dark-section">
 		      <div className="container">
 		        <Row gutter={16} type="flex" justify="center" align="middle">
@@ -159,22 +263,6 @@ class Projects extends Component {
 		        </Row>
 		      </div>
 		    </section>
-
-        <section className="download-investors-package dark-section">
-          <div className="container text-center">
-            <Row gutter={16}>
-              <Col md={24}>
-                <h1 className="title">Download Your Investor Package</h1>
-                <p className="description">
-                  Download a PDF copy of the investor package and learn more about <br /> the opportunity, our exclusive partnership with Bitfury Group, and the innovative “BlockBoxAC” containerized data centers.
-                </p>
-                <Button type="primary">DOWNLOAD</Button> 
-                <p className="links">View our <a href="https://www.hut8mining.com">HOME</a>, <a href="https://www.hut8mining.com/corporate">CORPORATE</a>, <a href="https://www.hut8mining.com/investors">INVESTORS</a>, and <a href="https://www.hut8mining.com/news/">NEWS</a> page,</p>
-                <p>or <a href="https://www.hut8mining.com/contact/">CONTACT US</a> for more info.</p>
-              </Col>
-            </Row>
-          </div>
-        </section>
 		  </div>
 		);
 	}
