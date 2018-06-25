@@ -18,11 +18,25 @@ class Navbar extends Component {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
+    let pathName = window.location.pathname;
+    let OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
+
+    const mainHeader = document.querySelector(".main-header");
+    const navHeight = document.querySelector(".navbar");
+    console.log(mainHeader, pathName);
+    if (OpaqueNav == "opaque-true") {
+      mainHeader.classList.add("opaque-true");
+      navHeight.classList.add("opaque-true");
+    } else {
+      mainHeader.classList.remove("opaque-true");
+      navHeight.classList.remove("opaque-true");
+    }
+
   }
 
   setNavOpaque() {
     let pathName = window.location.pathname;
-    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
+    let OpaqueNav = (pathName == "/news") || (pathName == "/contact/") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     
