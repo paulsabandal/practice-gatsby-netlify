@@ -9,7 +9,7 @@ class Navbar extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { isMobileMenuOpen: false, hasHash: false };
+    this.state = { isMobileMenuOpen: false, hasHash: false, isOpaqueNav: false};
     this.handleScroll = this.handleScroll.bind(this);
     this.stateMenuClick = this.stateMenuClick.bind(this);
   }
@@ -18,6 +18,11 @@ class Navbar extends Component {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
+    let pathName = window.location.pathname;
+    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
+
+    this.setState({ isOpaqueNav: OpaqueNav, })
+
   }
 
   stateMenuClick() {
@@ -46,11 +51,9 @@ class Navbar extends Component {
   }
 
   render() {
-    let pathName = window.location.pathname;
-    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
-
+    
     return (
-      <div className={"navbar container unscrolled " + OpaqueNav}>
+      <div className={`navbar container unscrolled ${this.state.isOpaqueNav}`}>
         <div className="logo">
           <img src={LogoWhite} className="logo-white" />
           <img src={Logo} className="logo-plain" />
@@ -60,7 +63,7 @@ class Navbar extends Component {
           defaultSelectedKeys={['2']}
           className="nav"
         >
-          <Menu.Item key="1"> <Link to="/">Home</Link></Menu.Item>
+          <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
           <Menu.Item key="2"><Link to="/corporate">Corporate</Link></Menu.Item>
           <Menu.Item key="3"><Link to="/projects">Projects</Link></Menu.Item>
           <Menu.Item key="4"><Link to="/investors">Investors</Link></Menu.Item>
