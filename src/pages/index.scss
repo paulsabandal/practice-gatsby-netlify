@@ -10,7 +10,7 @@
   justify-content: center;
   height: 95vh;
 	.title {
-		font-size: 3.5rem;
+		font-size: 3rem;
 		letter-spacing: 3px;
 		color: $hut8-teal;
 	}
@@ -199,28 +199,6 @@
 	 	}
 	 }
 	}
-
-	/* Move it (define the animation) */
-	@-moz-keyframes marquee {
-	 0%   { -moz-transform: translateX(100%); }
-	 100% { -moz-transform: translateX(-100%); }
-	}
-	@-webkit-keyframes marquee {
-	 0%   { -webkit-transform: translateX(100%); }
-	 100% { -webkit-transform: translateX(-100%); }
-	}
-	@keyframes marquee {
-		 0%   { 
-		 	-moz-transform: translateX(100%); /* Firefox bug fix */
-		 	-webkit-transform: translateX(100%); /* Firefox bug fix */
-		 	transform: translateX(100%); 		
-		 }
-		 100% { 
-		 	-moz-transform: translateX(-100%); /* Firefox bug fix */
-		 	-webkit-transform: translateX(-100%); /* Firefox bug fix */
-		 	transform: translateX(-100%); 
-		 }
-	}
 }
 
 .first-quarter {
@@ -228,4 +206,26 @@
 		padding: 32px 0;
 		color: $white;
 	}
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes marquee {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes marquee {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes marquee {
+	 0%   { 
+	 	-moz-transform: translateX(100%); /* Firefox bug fix */
+	 	-webkit-transform: translateX(100%); /* Firefox bug fix */
+	 	transform: translateX(100%); 		
+	 }
+	 100% { 
+	 	-moz-transform: translateX(-100%); /* Firefox bug fix */
+	 	-webkit-transform: translateX(-100%); /* Firefox bug fix */
+	 	transform: translateX(-100%); 
+	 }
 }

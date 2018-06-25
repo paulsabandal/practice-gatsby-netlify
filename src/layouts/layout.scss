@@ -2,6 +2,10 @@
 @import "src/styles/devices";
 @import "src/styles/overrides";
 
+a {
+	color: $hut8-teal;
+}
+
 .container {
 	padding: 0 2rem;
 	width: 1440px;
@@ -21,15 +25,11 @@
   width: 100%;
   padding: 0;
 
-	&.scrolled {
+	&.scrolled, &.opaque-true {
 		background: $white;
 		box-shadow: 0 0 2px 1px rgba(0,0,0,.16);
 		border-bottom: 0;
 	}
-
-	&.opaque-true {
-		border-bottom: 0;
-	}	
 }
 
 

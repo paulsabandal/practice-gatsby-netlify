@@ -32,7 +32,7 @@ class Footer extends Component {
         <div className="footer">
           <div className="container">
             <Row gutter={48} >
-              <Col md={6}>
+              <Col lg={6} md={12} sm={24} xs={24}>
                 <div className="menu-title">
                   Menu
                 </div>
@@ -48,7 +48,7 @@ class Footer extends Component {
                   <Menu.Item key="6"><Link to="/contact">Contact <Icon type="right" /> </Link></Menu.Item>
                 </Menu>
               </Col>
-              <Col md={6}>
+              <Col lg={6} md={12} sm={24} xs={24}>
                 <div className="menu-title">
                   Recent news
                 </div>
@@ -63,7 +63,7 @@ class Footer extends Component {
                   <Menu.Item key="5"><Link to="/news">Bitcoin battle brewing behind Hut 8 Mining’s Canadian TSX listing <Icon type="right" /></Link></Menu.Item>
                 </Menu>
               </Col>
-              <Col md={6}>
+              <Col lg={6} md={12} sm={24} xs={24}>
                 <div className="menu-title">
                   Latest News
                 </div>
@@ -78,7 +78,7 @@ class Footer extends Component {
                   </Row>
                 </div>
               </Col>
-              <Col md={6}>
+              <Col lg={6} md={12} sm={24} xs={24}>
                 <div className="menu-title">
                   Tsxv Exchange
                 </div>

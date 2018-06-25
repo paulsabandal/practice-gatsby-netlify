@@ -3,7 +3,7 @@
 
 .navbar {
 	height: 90px;
-	
+	margin: 0 auto !important;
 	&.unscrolled {
 		.logo-plain {
 			display: none;
@@ -21,7 +21,7 @@
 		.logo-white {
 			display: none;
 		}
-		.nav a {
+		.nav a, .nav a:hover {
 			color: $black;
 			text-transform: uppercase;
 		}
@@ -35,18 +35,18 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 0.75em;
 		background-color: transparent;
-		border-bottom: none;
+		border-bottom: 0;
 		line-height: 90px;
 		float: right;
 
-
+		.ant-menu-item,
 		.ant-menu-item-active, 
 		.ant-menu-item-selected, 
 		.ant-menu-item:hover {
 			border-bottom: 0;
 		}
 
-		a {
+		a, a:hover {
 			color: $white;
 			text-transform: uppercase;
 		}

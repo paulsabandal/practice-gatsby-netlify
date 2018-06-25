@@ -11,22 +11,28 @@ class Navbar extends Component {
     super(props);
     this.state = { isMobileMenuOpen: false, hasHash: false, isOpaqueNav: false};
     this.handleScroll = this.handleScroll.bind(this);
-    this.stateMenuClick = this.stateMenuClick.bind(this);
+    this.setNavOpaque = this.setNavOpaque.bind(this);
   }
 
   componentDidMount() {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
+  }
+
+  setNavOpaque() {
     let pathName = window.location.pathname;
     let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
 
+    const mainHeader = document.querySelector(".main-header");
+    
+    if (OpaqueNav == "opaque-true") {
+      mainHeader.classList.add("opaque-true");
+    } else {
+      mainHeader.classList.remove("opaque-true");
+    }
+
     this.setState({ isOpaqueNav: OpaqueNav, })
-
-  }
-
-  stateMenuClick() {
-    this.state.hasHash = true;
   }
 
   handleScroll() {
@@ -63,12 +69,12 @@ class Navbar extends Component {
           defaultSelectedKeys={['2']}
           className="nav"
         >
-          <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-          <Menu.Item key="2"><Link to="/corporate">Corporate</Link></Menu.Item>
-          <Menu.Item key="3"><Link to="/projects">Projects</Link></Menu.Item>
-          <Menu.Item key="4"><Link to="/investors">Investors</Link></Menu.Item>
-          <Menu.Item key="5"><Link to="/news">News</Link></Menu.Item>
-          <Menu.Item key="6"><Link to="/contact">Contact</Link></Menu.Item>
+          <Menu.Item key="1" onClick={this.setNavOpaque}><Link to="/">Home</Link></Menu.Item>
+          <Menu.Item key="2" onClick={this.setNavOpaque}><Link to="/corporate">Corporate</Link></Menu.Item>
+          <Menu.Item key="3" onClick={this.setNavOpaque}><Link to="/projects">Projects</Link></Menu.Item>
+          <Menu.Item key="4" onClick={this.setNavOpaque}><Link to="/investors">Investors</Link></Menu.Item>
+          <Menu.Item key="5" onClick={this.setNavOpaque}><Link to="/news">News</Link></Menu.Item>
+          <Menu.Item key="6" onClick={this.setNavOpaque}><Link to="/contact">Contact</Link></Menu.Item>
         </Menu>
       </div>
     )
