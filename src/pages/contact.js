@@ -96,7 +96,7 @@ class Contact extends Component {
               <Col md={12}>
               	<div className="contact-heading">
 	            		<h3 className="heading">Have Questions?</h3>
-	            		<p className="description">Have a question about Hut8 Mining? Curious about what we do, or just feel like saying hello? Don’t hesitate to drop us a line! We’d love to hear from you.</p>
+	            		<p className="description">Looking for quick answers? Most questions can be answered by visiting our <Link to="/investors"> FAQ section. </Link></p>
             		</div>
               	<div className="contact-heading">
 	            		<h3 className="heading">Get in Touch</h3>

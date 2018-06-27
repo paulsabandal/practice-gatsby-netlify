@@ -24,13 +24,13 @@ for (let i = 0; i < news.length; i++) {
   newsContent.push (
     <Col className="news-item" md={8}>
       <Row gutter={48}>
-        <Col md={4}>
+        <Col md={4} sm={4} xs={4}>
           <div className="date">
             <div className="day">{ news[i].day }</div>
             <div className="month">{ news[i].month }</div>
           </div>
         </Col>
-        <Col md={20}>
+        <Col md={20} sm={20} xs={20}>
           <div className="content">
             <div className="title">
               { news[i].title }
@@ -212,10 +212,11 @@ class IndexPage extends Component {
             </Row>
           </div>
         </section>
-        <section className="blockbox-innovation dark-section">
+        <section className="investor-advantage dark-section">
           <div className="container">
             <Row gutter={16}>
               <Col md={12}>
+                <img src={InvestorAdvantage} className="image-left"/>
                 <h1 className="title">Investor Advantage</h1>
                 <p className="description">
                   Hut 8 Mining’s launch transaction involves the acquisition of
@@ -229,7 +230,7 @@ class IndexPage extends Component {
                 <Button type="primary">Investors</Button>
               </Col>
               <Col md={12} className="text-center">
-                <img src={InvestorAdvantage} />
+                <img src={InvestorAdvantage} className="image-right"/>
               </Col>
             </Row>
           </div>
@@ -261,10 +262,10 @@ class IndexPage extends Component {
         <section className="subscribe-news dark-section">
           <div className="container">
             <Row gutter={16} type="flex" justify="center" align="middle">
-              <Col md={4}>
+              <Col md={4} xs={24}>
                 <p className="title">Get the latest news</p>
               </Col>
-              <Col md={16}>
+              <Col md={16} xs={24}>
                 <Form layout="inline" onSubmit={this.handleSubmit}>
                   <FormItem
                     wrapperCol={{ span: 24 }}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import { Menu } from 'antd'
+import { Menu, Icon } from 'antd'
 import LogoWhite from '../images/logo/logo-white.png';
 import Logo from '../images/logo/logo.png';
 import './navbar.scss'
@@ -36,7 +36,7 @@ class Navbar extends Component {
 
   setNavOpaque() {
     let pathName = window.location.pathname;
-    let OpaqueNav = (pathName == "/news") || (pathName == "/contact/") ? "opaque-true" : "";
+    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     
@@ -70,6 +70,10 @@ class Navbar extends Component {
     document.removeEventListener("scroll", this.handleScroll, false);
   }
 
+  toggleMobileMenu() {
+    this.state.isMobileMenuOpen ? this.setState({isMobileMenuOpen: false}) : this.setState({isMobileMenuOpen: true})
+  }
+
   render() {
     
     return (
@@ -90,6 +94,24 @@ class Navbar extends Component {
           <Menu.Item key="5" onClick={this.setNavOpaque}><Link to="/news">News</Link></Menu.Item>
           <Menu.Item key="6" onClick={this.setNavOpaque}><Link to="/contact">Contact</Link></Menu.Item>
         </Menu>
+        <div className={['mobile-toggle-container', this.state.isMobileMenuOpen ? 'active' : ''].join(' ')}>
+          <span className='mobile-toggle' onClick={() => this.toggleMobileMenu()} >
+              {this.state.isMobileMenuOpen ? <Icon type="close" /> : <Icon type="menu-unfold" /> }
+          </span>
+        </div>
+        <div className={['mobile-menu', this.state.isMobileMenuOpen ? 'active' : ''].join(' ')}>
+          <div className='mobile-wrap'>
+            <div className='nav-links'>
+              <Link to="/">Home</Link>
+              <Link to="/corporate">Corporate</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/investors">Investors</Link>
+              <Link to="/news">News</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
+          </div>
+        </div>
+        <div className={['shape', this.state.isMobileMenuOpen ? 'active' : ''].join(' ')} />
       </div>
     )
   }

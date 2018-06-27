@@ -3,8 +3,12 @@
 
 .footer {
   background: $dark;
-  padding: 3rem;
+  padding: 1rem;
   position: relative;
+
+  @include for-tablet-portrait-up {
+    padding: 3rem;
+  }
 
   .menu-title {
     font-size: 0.75rem;
@@ -12,6 +16,11 @@
     color: $white;
     padding-bottom: 16px;
     letter-spacing: 1.5px;
+    margin-top: 48px;
+
+    @include for-tablet-portrait-up {
+      margin-top: 0;
+    }
   }
 
   .menu {

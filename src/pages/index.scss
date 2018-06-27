@@ -1,5 +1,5 @@
-@import "src/styles/colors";
-@import "src/styles/devices";
+@import 'src/styles/colors';
+@import 'src/styles/devices';
 
 .hero-content {
 	text-align: center;
@@ -9,14 +9,25 @@
   flex-direction: column;
   justify-content: center;
   height: 95vh;
+  max-height: 720px;
+
 	.title {
-		font-size: 3rem;
+		font-size: 2rem;
 		letter-spacing: 3px;
 		color: $hut8-teal;
+		padding-top: 16px;
+
+		@include for-tablet-portrait-up {
+			font-size: 3rem;
+			padding-top: 0;
+		}
 	}
 	.sub-title {
 		font-weight: 300;
-		font-size: 1.25rem;
+		font-size: 0.825rem;
+		@include for-tablet-portrait-up {
+			font-size: 1.25rem;
+		}
 	}
 }
 
@@ -30,19 +41,34 @@
 
 	.description {
 		color: $dim-grey;
-		font-size: 1.25rem;
+		font-size: 0.75rem;
 		padding: 64px 0 24px;
+		@include for-tablet-portrait-up {
+			font-size: 1.25rem;
+		}
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		@include for-tablet-portrait-up {
+			font-size: 2.25rem;
+		}
+	}
+
+	img {
+		max-width: 480px;
+		width: 100%;
+		@include for-tablet-portrait-up {
+			width: auto;
+			max-width: 100%;
+		}
 	}
 	
-	h1 {
-		font-size: 2.25rem;
-	}
 }
 
 .hut8-video {
 	.title {
 		margin-bottom: 64px;
-		font-size: 2.25rem;
 		color: $white;
 	}
 
@@ -56,16 +82,45 @@
 	}
 }
 
-.blockbox-innovation {
+.blockbox-innovation, 
+.investor-advantage {
 	background: #d0d0d0;
 	.title {
 		color: $dim-grey;
-		font-size: 2.25rem;
 	}
 	.description {
-    font-size: .875rem;
+    font-size: .75rem;
+    @include for-tablet-portrait-up {
+    	font-size: .875rem;
+    }
     line-height: 1.75rem;
     padding-bottom: 24px;
+	}
+
+	img {
+		max-width: 480px;
+		width: 100%;
+		
+		&.image-left {
+			display: block;
+			margin-bottom: 32px;
+
+			@include for-tablet-portrait-up {
+				display: none;
+			}
+		}
+
+		&.image-right {
+			display: none;
+			@include for-tablet-portrait-up {
+				display: block;
+			}
+		}
+		
+		@include for-tablet-portrait-up {
+			width: auto;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -74,10 +129,13 @@
 	padding-bottom: 160px;
 	.testimonial {
 		font-family: 'Montserrat', sans-serif;
-		font-size: 1.125rem;
+		font-size: 0.875rem;
 		line-height: 1.5;
 		padding-top: 48px;
 		padding-bottom: 48px;
+		@include for-tablet-portrait-up {
+			font-size: 1.25rem;
+		}
 	}
 	.said-by {
 		font-family: 'Montserrat', sans-serif;
@@ -90,6 +148,12 @@
 }
 
 .news-item {
+
+	.content {
+		padding-bottom: 64px;
+		padding-left: 24px;
+	}
+
 	.date {
 		background: #f4f4f4;
     color: #666;
@@ -111,10 +175,14 @@
     color: #fff;
 	}
 	.title {
-		font-size: 20px;
+		font-size: 1rem;
 		margin-bottom: 20px;
 		color: $dim-grey;
 		max-width: 280px;
+
+		@include for-tablet-portrait-up {
+			font-size: 1.2rem;
+		}
 	}
 	.details {
 		font-size: 14px;
@@ -137,9 +205,15 @@
 	}
 	.ant-form-inline .subscription-input {
     max-width: 600px;
-    display: inline;
+    display: block;
     float: left;
     width: 100%;
+  	margin-top: 16px;
+
+    @include for-tablet-portrait-up {
+    	display: inline;
+    	margin-top: 0;
+    }
 	}
 	.ant-input {
 		border-radius: 0;
@@ -150,6 +224,12 @@
     color: #000;
     border: 1px solid #000;
     border-radius: 0;
+    width: 100%;
+    margin-top: 8px;
+
+    @include for-tablet-portrait-up {
+    	margin-top: 0;
+    }
 	}
 }
 
