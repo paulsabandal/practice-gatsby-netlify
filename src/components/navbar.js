@@ -18,7 +18,7 @@ class Navbar extends Component {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
-    let pathName = window.location.pathname;
+    let pathName = this.props.location.pathname;
     let OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
@@ -71,6 +71,7 @@ class Navbar extends Component {
   }
 
   toggleMobileMenu() {
+    this.setNavOpaque();
     this.state.isMobileMenuOpen ? this.setState({isMobileMenuOpen: false}) : this.setState({isMobileMenuOpen: true})
   }
 
@@ -102,12 +103,12 @@ class Navbar extends Component {
         <div className={['mobile-menu', this.state.isMobileMenuOpen ? 'active' : ''].join(' ')}>
           <div className='mobile-wrap'>
             <div className='nav-links'>
-              <Link to="/">Home</Link>
-              <Link to="/corporate">Corporate</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/investors">Investors</Link>
-              <Link to="/news">News</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/" onClick={() => this.toggleMobileMenu()}>Home</Link>
+              <Link to="/corporate" onClick={() => this.toggleMobileMenu()}>Corporate</Link>
+              <Link to="/projects" onClick={() => this.toggleMobileMenu()}>Projects</Link>
+              <Link to="/investors" onClick={() => this.toggleMobileMenu()}>Investors</Link>
+              <Link to="/news" onClick={() => this.toggleMobileMenu()}>News</Link>
+              <Link to="/contact" onClick={() => this.toggleMobileMenu()}>Contact</Link>
             </div>
           </div>
         </div>
