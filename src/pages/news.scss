@@ -9,7 +9,10 @@
 	}
 
 	.first-column {
-		padding-top: 80px;
+		padding-top: 0px;
+    @include for-phone-only {
+      padding-top: 80px;
+    }
 	}
 
 	.date {
@@ -20,6 +23,11 @@
     line-height: 20px;
     font-weight: bold;
     padding: 0;
+    display: none;
+
+    @include for-phone-only {
+      display: block;
+    }
 	}
 
 	.month {
@@ -33,10 +41,13 @@
 	}
 
 	.title {
-		font-size: 1.5rem;
+		font-size: 1rem;
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		padding-top: 24px;
+    @include for-phone-only {
+      font-size: 1.5rem;
+    }
 	}
 
 	.content {

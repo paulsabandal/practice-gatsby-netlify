@@ -102,11 +102,16 @@ a {
 }
 
 .fixed-paragraph-width {
-  font-size: 1.25rem;
+  font-size: 0.825rem;
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
   line-height: 2;
+
+  @include for-tablet-portrait-up {
+  	font-size: 1.25rem;
+  }
+
 }
 
 

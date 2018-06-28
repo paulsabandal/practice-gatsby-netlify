@@ -32,15 +32,15 @@ class News extends Component {
         <section className="news-list plain-section">
           <div className="container">
             <Row gutter={64}>
-              <Col md={18}>
+              <Col lg={18} md={24}>
                 <Row gutter={48}>
-                	<Col md={4} className="first-column">
+                	<Col md={4} sm={4} className="first-column">
       		          <div className="date">
       		            <div className="day">MAR</div>
       		            <div className="month">24</div>
       		          </div>
                 	</Col>
-                  <Col md={20} className="first-column">
+                  <Col md={20} sm={20} className="first-column">
                   	<div className="news-container">
                       <div className="image">
                       	<img src={MedicineHat} />
@@ -128,7 +128,7 @@ class News extends Component {
               </Col>
 
 
-              <Col md={6} className="first-column newsletter-subscription">
+              <Col lg={6} md={24} className="first-column newsletter-subscription">
                 <div className="menu-title">
                   Newsletter
                 </div>

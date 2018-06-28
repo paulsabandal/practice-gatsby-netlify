@@ -34,3 +34,12 @@
     }
  	}
 }
+
+.maps-section {
+  padding: 0;
+  margin-bottom: -8px;
+  iframe {
+    border: 0;
+    width: 100%;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
+import Link, { withPrefix }from 'gatsby-link'
 import { Menu, Icon } from 'antd'
 import LogoWhite from '../images/logo/logo-white.png';
 import Logo from '../images/logo/logo.png';
@@ -18,11 +18,12 @@ class Navbar extends Component {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
-    let pathName = this.props.location.pathname;
-    let OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
+    let pathName = location.pathname || '';
+    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     const navHeight = document.querySelector(".navbar");
+
     console.log(mainHeader, pathName);
     if (OpaqueNav == "opaque-true") {
       mainHeader.classList.add("opaque-true");
@@ -31,15 +32,13 @@ class Navbar extends Component {
       mainHeader.classList.remove("opaque-true");
       navHeight.classList.remove("opaque-true");
     }
-
   }
 
   setNavOpaque() {
-    let pathName = window.location.pathname;
+    let pathName = location.pathname || '';
     let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
-
     const mainHeader = document.querySelector(".main-header");
-    
+
     if (OpaqueNav == "opaque-true") {
       mainHeader.classList.add("opaque-true");
     } else {
@@ -76,7 +75,6 @@ class Navbar extends Component {
   }
 
   render() {
-    
     return (
       <div className={`navbar container unscrolled ${this.state.isOpaqueNav}`}>
         <div className="logo">

@@ -55,6 +55,7 @@ class Projects extends Component {
 			      <h4 className="subtitle text-center">Bitfury Blockbox: Overview</h4>
 				    <Row>
 				    	<Col md={8}>
+				    		<img src={BlockBox} className="image-left"/>
 				    		<ul className="list">
 				    			<li>The BlockBox AC (Air Cooled) is a containerized datacenter for bitcoin mining that substantially shortens the time required to start mining bitcoin on a commercial scale.</li>
 				    			<li>Units are comprised of a standard 40’ High Cube freight container for ease of transportation and installation on sites with sufficient power and internet available.</li>
@@ -68,8 +69,8 @@ class Projects extends Component {
 				    		</ul>
 				    	</Col>
 				    	<Col md={8} className="text-center">
-				    		<img src={BlockBox} />
-				    	</Col>
+				    		<img src={BlockBox} className="image-right"/>
+              </Col>
 				    </Row>
 			    </div>
 			  </section>

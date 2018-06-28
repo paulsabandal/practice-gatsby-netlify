@@ -10,7 +10,7 @@ import './layout.scss';
 
 const { Sider, Content, Header } = Layout;
 
-const App = ({ children, data }) => (   
+const App = ({ children, data, location }) => (   
 
   <div>
     <Helmet
@@ -22,7 +22,7 @@ const App = ({ children, data }) => (
     />
     <Layout>
       <Header className="main-header">
-        <Navbar />
+        <Navbar location />
       </Header>
       <Content>
         <HeroBackground />

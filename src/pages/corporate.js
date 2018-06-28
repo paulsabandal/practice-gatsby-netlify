@@ -33,7 +33,7 @@ let members = [
 
 for (let i = 0; i < members.length; i++) {
   teamMembers.push (
-		<Col span={8}>
+		<Col lg={8} md={8} sm={24} xs={24}>
 			<div className="member-thumbnail">
   			<div className="photo">
   				<img src={members[i].photo} className="photo-holder"/>
@@ -131,13 +131,13 @@ class Corporate extends Component {
 			  <section className="about-count plain-section">
 		  	  <div className="container text-center">
 				  	<Row>
-				  		<Col span={8}>
+				  		<Col lg={8} md={8} sm={24} xs={24}>
 				  			<h2>57 <br /> <small>Datacenter</small></h2>
 				  		</Col>
-				  		<Col span={8}>
+				  		<Col lg={8} md={8} sm={24} xs={24}>
 				  			<h2>62 <br /> <small>Megawatts</small></h2>
 				  		</Col>
-				  		<Col span={8}>
+				  		<Col lg={8} md={8} sm={24} xs={24}>
 				  			<h2>428 <br /> <small>PH/S</small></h2>
 				  		</Col>
 				  	</Row>
@@ -165,7 +165,7 @@ class Corporate extends Component {
 			      <h1 className="title text-center">Our Executive Team</h1>
 			      <div className="title-divider align-center" />
 				  	<Row type="flex" justify="center" align="top">
-				  		<Col span={8}>
+				  		<Col lg={12} md={12} sm={24} xs={24}>
 				  			<div className="member-thumbnail">
 					  			<div className="photo">
 					  				<img src={Andrew} className="photo-holder"/>
@@ -181,7 +181,7 @@ class Corporate extends Component {
 					  			</div>
 					  		</div>
 				  		</Col>
-				  		<Col span={8}>
+				  		<Col lg={12} md={12} sm={24} xs={24}>
 				  			<div className="member-thumbnail">
 					  			<div className="photo">
 					  				<img src={Kyle} className="photo-holder"/>
@@ -237,17 +237,17 @@ class Corporate extends Component {
 		      <div className="container text-center">
 		        <h1 className="title">Our Mission & Values</h1>
 		        <Row gutter={48} type="flex" justify="center" align="center">
-		          <Col span={6}>
+		          <Col lg={8} md={8} sm={24} xs={24}>
 		          	<Icon type="rocket" />
 		          	<h4 className="heading">OUR MISSION</h4>
 		          	<p className="content">We provide cryptocurrency mining solutions to enhance blockchain development, while creating better technologies that benefit both our investors and the environment.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col lg={8} md={8} sm={24} xs={24}>
 		          	<Icon type="eye" />
 		          	<h4 className="heading">OUR VISION</h4>
 		          	<p className="content">To make Hut 8 Mining the largest cryptocurrency mining company in the world through strong partnerships, innovation, and leadership.</p>
 		          </Col>
-		          <Col span={6}>
+		          <Col lg={8} md={8} sm={24} xs={24}>
 		          	<Icon type="book" />
 		          	<h4 className="heading">OUR VALUES</h4>
 		          	<p className="content">Trust, the pillar we stand on. <br /> Respect for everyone. <br />Understanding and empathy. <br /> Sustainable development. <br /> Transparency in everything.</p>

@@ -33,7 +33,7 @@ class Contact extends Component {
         <section className="contact no-particles plain-section">
           <div className="container">
             <Row gutter={64}>
-            	<Col md={12}>
+            	<Col md={12} sm={24} xs={24}>
               	<div className="contact-heading">
 	            		<h3 className="heading">Contact Us</h3>
 	            		<p className="description">Have a question about Hut8 Mining? Curious about what we do, or just feel like saying hello? Don’t hesitate to drop us a line! We’d love to hear from you.</p>
@@ -93,7 +93,7 @@ class Contact extends Component {
 					        </FormItem>
 					      </Form>
             	</Col>
-              <Col md={12}>
+              <Col md={12} sm={24} xs={24}>
               	<div className="contact-heading">
 	            		<h3 className="heading">Have Questions?</h3>
 	            		<p className="description">Looking for quick answers? Most questions can be answered by visiting our <Link to="/investors"> FAQ section. </Link></p>
@@ -120,6 +120,9 @@ class Contact extends Component {
               </Col>
             </Row>
           </div>
+        </section>
+        <section className="maps-section plain-section">
+        	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.995883894063!2d-79.3852666840962!3d43.648253979121506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d28bb3477b%3A0x703bada3cab80755!2sThe+PATH+-+Exchange+Tower%2C+Toronto%2C+ON%2C+Canada!5e0!3m2!1sen!2sph!4v1530209585892" height="450" frameborder="0" allowfullscreen></iframe>
         </section>
         <section className="subscribe-news dark-section">
           <div className="container">

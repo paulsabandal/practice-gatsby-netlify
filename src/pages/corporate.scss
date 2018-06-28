@@ -7,6 +7,14 @@
 		width: 100%;
 	}
 }
+
+.blank-video {
+	background-size: cover;
+	background-image: url('../images/corporate/enigma-machine.png');
+  background-color: #404856;
+  background-blend-mode: multiply;
+}
+
 .about-count {
 	h2 {
 		font-size: 3rem;
@@ -21,7 +29,6 @@
 }
 
 .about-bitfury-group {
-	height: 80vh;
 	background-size: cover;
 	background-image: url('../images/corporate/bitfury2-blackwhite.jpeg');
   background-color: #404856;

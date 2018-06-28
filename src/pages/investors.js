@@ -264,10 +264,10 @@ class Investors extends Component {
             <h1 className="title text-center">Frequently Asked Questions</h1>
             <div className="title-divider align-center" />
               <Row gutter={48} type="flex" className="faq-list">
-                <Col span={12}> 
+                <Col md={12} sm={24} xs={24}>
                   {general_faqs}
                 </Col>
-                <Col span={12}> 
+                <Col md={12} sm={24} xs={24}>
                   <div className="link-to-contact">
                     <h3>Have questions?</h3>
                     <p>Didn’t find answers to a particular question? Feel free to reach out!</p>
