@@ -16,6 +16,7 @@
 		letter-spacing: 3px;
 		color: $hut8-teal;
 		padding-top: 16px;
+		max-width: 600px;
 
 		@include for-tablet-portrait-up {
 			font-size: 3rem;

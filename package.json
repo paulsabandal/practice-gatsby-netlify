@@ -11,6 +11,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "react-helmet": "^5.2.0",
     "react-particles-js": "^2.2.0",
+    "react-reveal": "^1.2.2",
     "scramble-text": "^0.0.8"
   },
   "keywords": [

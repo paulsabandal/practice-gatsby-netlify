@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
+import TextScramble from '../components/text-scrambler'
 import './projects.scss';
 import BlockBox from '../images/projects/blockbox.jpg';
 import BlockBoxAC from '../images/projects/blockbox-ac.jpg';
@@ -22,7 +23,20 @@ class Projects extends Component {
 
   componentDidMount() {
     this.props.form.validateFields();
+    this.initTextScramble()
   }
+
+  initTextScramble() {
+    const element = document.querySelector(".main-title-heading");
+    const fx = new TextScramble(element)
+    const phrases = [
+      'Leading Blockchain <br /> Infrastructure Company'
+    ]
+    let counter = 0
+    
+    fx.setText(phrases[counter]);
+  }
+
   render() {
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -38,9 +52,7 @@ class Projects extends Component {
 		return (
 			<div>
 			  <section className="container hero-content">
-			    <h1 className="title">
-			      Leading Blockchain <br /> Infrastructure Company 
-			    </h1>
+			    <h1 className="title main-title-heading"></h1>
 			    <p className="sub-title">
 			      Leading Edge Data Centers Mining Cryptocurrencies Around The Clock.
 			    </p>

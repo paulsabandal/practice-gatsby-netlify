@@ -23,7 +23,7 @@ class Navbar extends Component {
 
   setNavOpaque() {
     let pathName = location.pathname || '';
-    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
+    let OpaqueNav = (pathName == "/news" || "/news/") || (pathName == "/contact" || "/contact/") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     const navHeight = document.querySelector(".navbar");
