@@ -23,7 +23,7 @@ class Navbar extends Component {
 
   setNavOpaque() {
     let pathName = location.pathname || '';
-    let OpaqueNav = (pathName == "/news" || "/news/") || (pathName == "/contact" || "/contact/") ? "opaque-true" : "";
+    let OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     const navHeight = document.querySelector(".navbar");
@@ -80,11 +80,11 @@ class Navbar extends Component {
           className="nav"
         >
           <Menu.Item key="1" onClick={this.setNavOpaque}><Link to="/">Home</Link></Menu.Item>
-          <Menu.Item key="2" onClick={this.setNavOpaque}><Link to="/corporate">Corporate</Link></Menu.Item>
-          <Menu.Item key="3" onClick={this.setNavOpaque}><Link to="/projects">Projects</Link></Menu.Item>
-          <Menu.Item key="4" onClick={this.setNavOpaque}><Link to="/investors">Investors</Link></Menu.Item>
-          <Menu.Item key="5" onClick={this.setNavOpaque}><Link to="/news">News</Link></Menu.Item>
-          <Menu.Item key="6" onClick={this.setNavOpaque}><Link to="/contact">Contact</Link></Menu.Item>
+          <Menu.Item key="2" onClick={this.setNavOpaque}><Link to="/corporate/">Corporate</Link></Menu.Item>
+          <Menu.Item key="3" onClick={this.setNavOpaque}><Link to="/projects/">Projects</Link></Menu.Item>
+          <Menu.Item key="4" onClick={this.setNavOpaque}><Link to="/investors/">Investors</Link></Menu.Item>
+          <Menu.Item key="5" onClick={this.setNavOpaque}><Link to="/news/">News</Link></Menu.Item>
+          <Menu.Item key="6" onClick={this.setNavOpaque}><Link to="/contact/">Contact</Link></Menu.Item>
         </Menu>
         <div className={['mobile-toggle-container', this.state.isMobileMenuOpen ? 'active' : ''].join(' ')}>
           <span className='mobile-toggle' onClick={() => this.toggleMobileMenu()} >
@@ -95,11 +95,11 @@ class Navbar extends Component {
           <div className='mobile-wrap'>
             <div className='nav-links'>
               <Link to="/" onClick={() => this.toggleMobileMenu()}>Home</Link>
-              <Link to="/corporate" onClick={() => this.toggleMobileMenu()}>Corporate</Link>
-              <Link to="/projects" onClick={() => this.toggleMobileMenu()}>Projects</Link>
-              <Link to="/investors" onClick={() => this.toggleMobileMenu()}>Investors</Link>
-              <Link to="/news" onClick={() => this.toggleMobileMenu()}>News</Link>
-              <Link to="/contact" onClick={() => this.toggleMobileMenu()}>Contact</Link>
+              <Link to="/corporate/" onClick={() => this.toggleMobileMenu()}>Corporate</Link>
+              <Link to="/projects/" onClick={() => this.toggleMobileMenu()}>Projects</Link>
+              <Link to="/investors/" onClick={() => this.toggleMobileMenu()}>Investors</Link>
+              <Link to="/news/" onClick={() => this.toggleMobileMenu()}>News</Link>
+              <Link to="/contact/" onClick={() => this.toggleMobileMenu()}>Contact</Link>
             </div>
           </div>
         </div>
