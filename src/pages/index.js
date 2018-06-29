@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
+import TextScramble from '../components/text-scrambler'
 import './index.scss';
 import BitFury from '../images/index/bitfury.png';
 import BlockBox from '../images/index/blockbox.png';
@@ -22,7 +23,7 @@ const news = [
 
 for (let i = 0; i < news.length; i++) {
   newsContent.push (
-    <Col className="news-item" md={8}>
+    <Col className="news-item" md={8} key={i}>
       <Row gutter={48}>
         <Col md={4} sm={4} xs={4}>
           <div className="date">
@@ -70,6 +71,19 @@ class IndexPage extends Component {
   componentDidMount() {
     this.props.form.validateFields();
     this.loadData()
+    this.initTextScramble()
+  }
+
+  initTextScramble() {
+    const element = document.querySelector(".main-title-heading");
+    const fx = new TextScramble(element)
+    const phrases = [
+      'Global Cryptocurrency <br /> Mining Leadership'
+    ]
+    let counter = 0
+    
+    fx.setText(phrases[counter]);
+    
   }
 
   render() {
@@ -100,9 +114,7 @@ class IndexPage extends Component {
       <div>
         <section className="container">
         	<div className="hero-content">
-	          <h1 className="title">
-	            Global Cryptocurrency <br /> Mining Leadership
-	          </h1>
+	          <h1 className="title main-title-heading"></h1>
 	          <p className="sub-title">
 	            Establishing North America’s Largest Cryptocurrency Mining Data
 	            Centers.

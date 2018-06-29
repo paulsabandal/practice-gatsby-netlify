@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input, Collapse } from 'antd'
 import Link from 'gatsby-link'
+import TextScramble from '../components/text-scrambler'
 import './investors.scss';
 import EarlyMovers from '../images/investors/earlymover.png';
 import DataCenterInnovation from '../images/investors/datacenterinnovation.png';
@@ -87,6 +88,18 @@ class Investors extends Component {
 
   componentDidMount() {
     this.props.form.validateFields();
+    this.initTextScramble()
+  }
+
+  initTextScramble() {
+    const element = document.querySelector(".main-title-heading");
+    const fx = new TextScramble(element)
+    const phrases = [
+      'Maximizing Long-Term <br /> Shareholder Value '
+    ]
+    let counter = 0
+    
+    fx.setText(phrases[counter]);
   }
 
   render() {
@@ -113,9 +126,7 @@ class Investors extends Component {
     return (
       <div>
         <section className="container hero-content">
-          <h1 className="title">
-            Maximizing Long-Term <br /> Shareholder Value 
-          </h1>
+          <h1 className="title main-title-heading"></h1>
           <p className="sub-title">
             Accelerating Development Of Blockchain Through Traditional Capital Markets.
           </p>

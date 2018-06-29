@@ -18,31 +18,22 @@ class Navbar extends Component {
     // add listener for scroll event
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
+    this.setNavOpaque();
+  }
+
+  setNavOpaque() {
     let pathName = location.pathname || '';
     let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");
     const navHeight = document.querySelector(".navbar");
 
-    console.log(mainHeader, pathName);
     if (OpaqueNav == "opaque-true") {
       mainHeader.classList.add("opaque-true");
       navHeight.classList.add("opaque-true");
     } else {
       mainHeader.classList.remove("opaque-true");
       navHeight.classList.remove("opaque-true");
-    }
-  }
-
-  setNavOpaque() {
-    let pathName = location.pathname || '';
-    let OpaqueNav = (pathName == "/news") || (pathName == "/contact") ? "opaque-true" : "";
-    const mainHeader = document.querySelector(".main-header");
-
-    if (OpaqueNav == "opaque-true") {
-      mainHeader.classList.add("opaque-true");
-    } else {
-      mainHeader.classList.remove("opaque-true");
     }
 
     this.setState({ isOpaqueNav: OpaqueNav, })
@@ -78,8 +69,10 @@ class Navbar extends Component {
     return (
       <div className={`navbar container unscrolled ${this.state.isOpaqueNav}`}>
         <div className="logo">
-          <img src={LogoWhite} className="logo-white" />
-          <img src={Logo} className="logo-plain" />
+          <Link to="/">
+            <img src={LogoWhite} className="logo-white" />
+            <img src={Logo} className="logo-plain" />
+          </Link>
         </div>
         <Menu
           mode="horizontal"
