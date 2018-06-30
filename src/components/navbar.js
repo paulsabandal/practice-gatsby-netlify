@@ -19,6 +19,8 @@ class Navbar extends Component {
     document.addEventListener("scroll", this.handleScroll, false);
     // document.addEventListener('scroll', this.addMenuActiveState, false)
     this.setNavOpaque();
+    let pathName = location.pathname || '';
+    console.log(pathName);
   }
 
   setNavOpaque() {
