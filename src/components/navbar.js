@@ -20,7 +20,6 @@ class Navbar extends Component {
     // document.addEventListener('scroll', this.addMenuActiveState, false)
     this.setNavOpaque();
     let pathName = location.pathname || '';
-    console.log(pathName);
   }
 
   setNavOpaque() {
@@ -69,8 +68,10 @@ class Navbar extends Component {
   }
 
   render() {
+    const location = location || '';
     const pathName = location.pathname || '';
     const OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
+    console.log(location);
 
     return (
       <div className={`navbar container unscrolled ${OpaqueNav}`}>
