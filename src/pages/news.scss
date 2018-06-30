@@ -57,6 +57,11 @@
 
 	.news-container {
 		border-bottom: 1px solid #efefef;
+    padding-top: 48px;
+
+    @include for-phone-only {
+      padding-top: 0;
+    }
 	}
 
 	img {
