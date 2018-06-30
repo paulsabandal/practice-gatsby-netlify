@@ -3,6 +3,7 @@ import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
 import TextScramble from '../components/text-scrambler'
 import './index.scss';
+import Fade from 'react-reveal/Fade';
 import BitFury from '../images/index/bitfury.png';
 import BlockBox from '../images/index/blockbox.png';
 import InvestorAdvantage from '../images/index/investor-advantage.png'
@@ -130,7 +131,9 @@ class IndexPage extends Component {
               One Of The World’s Largest Publicly Traded Cryptocurrency Miner
             </h1>
             <h1 className="in-partnership">In Partnership with:</h1>
-            <img src={BitFury} />
+            <Fade bottom>
+              <img src={BitFury} />
+            </Fade>
             <div className="description">
               <p>
                 Exclusive Partnership between Hut 8 Mining and Bitfury Group{" "}
@@ -138,7 +141,9 @@ class IndexPage extends Component {
                 America
               </p>
             </div>
-            <Button type="primary">About Us</Button>
+            <Link to="/corporate/">
+              <Button type="primary">About Us</Button>
+            </Link>
           </div>
         </section>
         <section className="hut8-video dark-section">
@@ -158,7 +163,9 @@ class IndexPage extends Component {
           <div className="container">
             <Row gutter={16}>
               <Col md={12}>
-                <img src={BlockBox} />
+                <Fade left>
+                  <img src={BlockBox} />
+                </Fade>
               </Col>
               <Col md={12}>
                 <h1 className="title">Blockbox Innovation</h1>
@@ -171,7 +178,9 @@ class IndexPage extends Component {
                   edge computing components and infrastructure design in order
                   to mine cryptocurrency around the clock.
                 </p>
-                <Button type="primary">Our Projects</Button>
+                <Link to="/projects/">
+                  <Button type="primary">Our Projects</Button>
+                </Link>
               </Col>
             </Row>
           </div>
@@ -239,7 +248,9 @@ class IndexPage extends Component {
                   edge computing components and infrastructure design in order
                   to mine cryptocurrency around the clock.
                 </p>
-                <Button type="primary">Investors</Button>
+                <Link to="/investors/">
+                  <Button type="primary">Investors</Button>
+                </Link>
               </Col>
               <Col md={12} className="text-center">
                 <img src={InvestorAdvantage} className="image-right"/>

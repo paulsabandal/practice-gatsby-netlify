@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input, Collapse } from 'antd'
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 import Link from 'gatsby-link'
 import TextScramble from '../components/text-scrambler'
 import './investors.scss';
@@ -140,25 +142,31 @@ class Investors extends Component {
             <div className="title-divider align-center" />
             <Row gutter={48} type="flex" justify="center" align="center">
               <Col md={8} xs={24}>
-                <div className="icon-image">  
-                  <img src={EarlyMovers}/>
-                </div>
-                <h4 className="heading">Early Entry Advantage</h4>
-                <p className="content">Among the first publicly traded companies offering investors access to blockchain technology and cryptocurrency mining data centers, backed by over a century of expertise in technology, finance, and business.</p>
+                <Bounce bottom>
+                  <div className="icon-image">  
+                    <img src={EarlyMovers}/>
+                  </div>
+                  <h4 className="heading">Early Entry Advantage</h4>
+                  <p className="content">Among the first publicly traded companies offering investors access to blockchain technology and cryptocurrency mining data centers, backed by over a century of expertise in technology, finance, and business.</p>
+                </Bounce>
               </Col>
               <Col md={8} xs={24}>
-                <div className="icon-image">  
-                  <img src={DataCenterInnovation} />
-                </div>
-                <h4 className="heading">Datacenter Innovation</h4>
-                <p className="content">Each “BlockboxAC” data center is a full-featured, quick-start, and portable solution for cryptocurrency mining, is delivered in a 40’ high cube freight container allowing rapid scale. Once deployed, no further investments of time or capital is required.</p>
+                <Bounce bottom>
+                  <div className="icon-image">  
+                    <img src={DataCenterInnovation} />
+                  </div>
+                  <h4 className="heading">Datacenter Innovation</h4>
+                  <p className="content">Each “BlockboxAC” data center is a full-featured, quick-start, and portable solution for cryptocurrency mining, is delivered in a 40’ high cube freight container allowing rapid scale. Once deployed, no further investments of time or capital is required.</p>
+                </Bounce>
               </Col>
               <Col md={8} xs={24}>
-                <div className="icon-image">  
-                  <img src={StrategicPartnership} />
-                </div>
-                <h4 className="heading">Strategic Partnerships</h4>
-                <p className="content">Exclusive partnership with Bitfury Group, the world’s largest cryptocurrency mining company outside of China, accelerates the deployment of data centers, secures long-term strategic IP, and maximizes long-term shareholder value.</p>
+                <Bounce bottom>
+                  <div className="icon-image">  
+                    <img src={StrategicPartnership} />
+                  </div>
+                  <h4 className="heading">Strategic Partnerships</h4>
+                  <p className="content">Exclusive partnership with Bitfury Group, the world’s largest cryptocurrency mining company outside of China, accelerates the deployment of data centers, secures long-term strategic IP, and maximizes long-term shareholder value.</p>
+                </Bounce>
               </Col>
             </Row>
           </div>
@@ -204,67 +212,75 @@ class Investors extends Component {
             <div className="title-divider align-center" />
             <Row gutter={48} type="flex" justify="center" align="center">
               <Col md={6} xs={24}>
-                <div className="icon-title">
-                  <div className="icon-image">  
-                    <img src={Partnerships} className="svg-icon" />
+                <Bounce bottom>
+                  <div className="icon-title">
+                    <div className="icon-image">  
+                      <img src={Partnerships} className="svg-icon" />
+                    </div>
+                    <h3 className="heading">Bitfury Partnership</h3>
                   </div>
-                  <h3 className="heading">Bitfury Partnership</h3>
-                </div>
-                <p className="content">
-                  <ul>
-                    <li class="li1"><span class="s2"><strong>Bitfury</strong> is one of the <strong>largest bitcoin miners in the world outside of China </strong></span></li>
-                    <li class="li1"><span class="s2">Owns, co-owns and services datacenters of <strong>58 MW in Alberta plus 114 MW globally</strong></span></li>
-                    <li class="li1"><span class="s2">Manufactures their own <strong>proprietary ASIC chips</strong></span></li>
-                    <li class="li1"><span class="s2">Bitfury delivers exclusively to <strong>Hut 8 a bitcoin mining</strong> solution </span></li>
-                  </ul>
-                </p>
+                  <p className="content">
+                    <ul>
+                      <li class="li1"><span class="s2"><strong>Bitfury</strong> is one of the <strong>largest bitcoin miners in the world outside of China </strong></span></li>
+                      <li class="li1"><span class="s2">Owns, co-owns and services datacenters of <strong>58 MW in Alberta plus 114 MW globally</strong></span></li>
+                      <li class="li1"><span class="s2">Manufactures their own <strong>proprietary ASIC chips</strong></span></li>
+                      <li class="li1"><span class="s2">Bitfury delivers exclusively to <strong>Hut 8 a bitcoin mining</strong> solution </span></li>
+                    </ul>
+                  </p>
+                </Bounce>
               </Col>
               <Col md={6} xs={24}>
-                <div className="icon-title">
-                  <div className="icon-image">  
-                    <img src={DataCenterAssets} className="svg-icon" />
+                <Bounce bottom>
+                  <div className="icon-title">
+                    <div className="icon-image">  
+                      <img src={DataCenterAssets} className="svg-icon" />
+                    </div>
+                    <h3 className="heading">Datacenter Assets</h3>
                   </div>
-                  <h3 className="heading">Datacenter Assets</h3>
-                </div>
-                <p className="content">
-                  <ul>
-                    <li class="li1"><span class="s2">No facility retrofit costs required: <strong>datacenters are ready-to-use and portable</strong></span></li>
-                    <li class="li1"><strong><span class="s2">Low electricity prices: historical average of $0.03-$0.035 / kWh</span></strong></li>
-                    <li class="li1"><span class="s2">Hut 8 intends to scale rapidly with installed capacity expected to reach <strong>74 MW in 2018</strong></span></li>
-                    <li>Near future projects in <strong>Georgia, and Quebec</strong></li>
-                  </ul>
-                </p>
+                  <p className="content">
+                    <ul>
+                      <li class="li1"><span class="s2">No facility retrofit costs required: <strong>datacenters are ready-to-use and portable</strong></span></li>
+                      <li class="li1"><strong><span class="s2">Low electricity prices: historical average of $0.03-$0.035 / kWh</span></strong></li>
+                      <li class="li1"><span class="s2">Hut 8 intends to scale rapidly with installed capacity expected to reach <strong>74 MW in 2018</strong></span></li>
+                      <li>Near future projects in <strong>Georgia, and Quebec</strong></li>
+                    </ul>
+                  </p>
+                </Bounce>
               </Col>
               <Col md={6} xs={24}>
-                <div className="icon-title">
-                  <div className="icon-image">  
-                    <img src={BitcoinPopularity} className="svg-icon" />
+                <Bounce bottom>
+                  <div className="icon-title">
+                    <div className="icon-image">  
+                      <img src={BitcoinPopularity} className="svg-icon" />
+                    </div>
+                    <h3 className="heading">Bitcoin Popularity</h3>
                   </div>
-                  <h3 className="heading">Bitcoin Popularity</h3>
-                </div>
-                <p className="content">
-                  <ul>
-                    <li class="li1"><span class="s2"><b>Scarcity Factor</b>: 21 million circulation limit on coins</span></li>
-                    <li class="li1"><span class="s2"><b>Predictability:</b> Mining rates predetermined. Currently 12.5 bitcoin per block plus transaction fees that grow over time </span></li>
-                    <li class="li1"><span class="s2"><b>Security: </b>Proof of Work via SHA 256; no migration expected to Proof of Stake</span></li>
-                    <li class="li1"><span class="s2"><b>Scale:</b> Market moving from hobbyists to scale driven utilities</span></li>
-                  </ul>
-                </p>
+                  <p className="content">
+                    <ul>
+                      <li class="li1"><span class="s2"><b>Scarcity Factor</b>: 21 million circulation limit on coins</span></li>
+                      <li class="li1"><span class="s2"><b>Predictability:</b> Mining rates predetermined. Currently 12.5 bitcoin per block plus transaction fees that grow over time </span></li>
+                      <li class="li1"><span class="s2"><b>Security: </b>Proof of Work via SHA 256; no migration expected to Proof of Stake</span></li>
+                      <li class="li1"><span class="s2"><b>Scale:</b> Market moving from hobbyists to scale driven utilities</span></li>
+                    </ul>
+                  </p>
+                </Bounce>
               </Col>
               <Col md={6} xs={24}>
-                <div className="icon-title">
-                  <div className="icon-image">  
-                    <img src={KeyMetrics} className="svg-icon" />
+                <Bounce bottom>
+                  <div className="icon-title">
+                    <div className="icon-image">  
+                      <img src={KeyMetrics} className="svg-icon" />
+                    </div>
+                    <h3 className="heading">Key Metrics</h3>
                   </div>
-                  <h3 className="heading">Key Metrics</h3>
-                </div>
-                <p className="content">
-                  <ul>
-                    <li class="li1"><span class="s2"><b>Completed acquisition of 22 datacenters </b>(7 operating, 15 ordered) with Phase II to represent an additional 45 datacenters (10 operating, 35 ordered) to achieve total 503 PH/s with electrical capacity of 74 MW</span></li>
-                    <li class="li1"><span class="s2">Illustrative revenue and gross mining margin potential of US$[•] million and US$[•] million, respectively</span></li>
-                    <li class="li1"><span class="s2"><b>Post-money valuation of $7.6 million / MW</b></span></li>
-                  </ul>
-                </p>
+                  <p className="content">
+                    <ul>
+                      <li class="li1"><span class="s2"><b>Completed acquisition of 22 datacenters </b>(7 operating, 15 ordered) with Phase II to represent an additional 45 datacenters (10 operating, 35 ordered) to achieve total 503 PH/s with electrical capacity of 74 MW</span></li>
+                      <li class="li1"><span class="s2">Illustrative revenue and gross mining margin potential of US$[•] million and US$[•] million, respectively</span></li>
+                      <li class="li1"><span class="s2"><b>Post-money valuation of $7.6 million / MW</b></span></li>
+                    </ul>
+                  </p>
+                </Bounce>
               </Col>
             </Row>
           </div>

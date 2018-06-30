@@ -43,6 +43,7 @@
 	}
 }
 
+
 .blockbox-benefits, .our-approach {
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -95,6 +96,12 @@
 }
 
 .project-1, .project-2 {
+	.blockbox-ac{	
+	  padding: 16px;
+	  background: #ebeef1;
+	  width: 100%;
+	  max-width: 1000px;
+	}
 	.content {
 		padding: 24px 0;
 		font-size: 0.825rem;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 import TextScramble from '../components/text-scrambler'
 import './projects.scss';
 import BlockBox from '../images/projects/blockbox.jpg';
@@ -81,7 +83,9 @@ class Projects extends Component {
 				    		</ul>
 				    	</Col>
 				    	<Col md={8} className="text-center">
-				    		<img src={BlockBox} className="image-right"/>
+				    		<Fade right>
+					    		<img src={BlockBox} className="image-right"/>
+				    		</Fade>
               </Col>
 				    </Row>
 			    </div>
@@ -97,48 +101,60 @@ class Projects extends Component {
 			      <div className="title-divider align-center" />
 		        <Row gutter={48} type="flex" justify="center" align="center">
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={Innovative}/>
-		          	</div>
-		          	<h4 className="heading">Innovation</h4>
-		          	<p className="content">BlockBox AC is based on modern hardware and software manufactured by Bitfury. The basic configuration includes 176 Bitfury B8 servers. Each server houses six hashboards, each contains 96 specialized ASIC bitcoin mining chips. Each BlockBox has over 100,000 ASIC mining chips.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={Innovative}/>
+			          	</div>
+			          	<h4 className="heading">Innovation</h4>
+			          	<p className="content">BlockBox AC is based on modern hardware and software manufactured by Bitfury. The basic configuration includes 176 Bitfury B8 servers. Each server houses six hashboards, each contains 96 specialized ASIC bitcoin mining chips. Each BlockBox has over 100,000 ASIC mining chips.</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={Monitoring} />
-		          	</div>
-		          	<h4 className="heading">Monitoring</h4>
-		          	<p className="content">The Bitfury BlockBox AC is monitored on-site and remotely using built-in software and/or a mobile app, displaying key performance indicators.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={Monitoring} />
+			          	</div>
+			          	<h4 className="heading">Monitoring</h4>
+			          	<p className="content">The Bitfury BlockBox AC is monitored on-site and remotely using built-in software and/or a mobile app, displaying key performance indicators.</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={CuttingEdge} />
-		          	</div>
-		          	<h4 className="heading">Cutting-Edge</h4>
-		          	<p className="content">The BlockBox AC, both software and hardware components, can be easily upgraded.  The modular architecture of the Bitfury BlockBox AC and its Bitfury В8 servers allows it to keep in place more than the half of components when upgrading hardware to keep up with technology advances and ASIC chips progress.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={CuttingEdge} />
+			          	</div>
+			          	<h4 className="heading">Cutting-Edge</h4>
+			          	<p className="content">The BlockBox AC, both software and hardware components, can be easily upgraded.  The modular architecture of the Bitfury BlockBox AC and its Bitfury В8 servers allows it to keep in place more than the half of components when upgrading hardware to keep up with technology advances and ASIC chips progress.</p>
+		          	</Bounce>
 		          </Col>
 		        </Row>
 		        <Row gutter={48} type="flex" justify="center" align="center">
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={Quickstart}/>
-		          	</div>
-		          	<h4 className="heading">Quick Start</h4>
-		          	<p className="content">It takes two days to install Bitfury BlockBox AC on a properly prepared site.  Once installed, the solution connects to the mining pool, and immediately starts to generate income.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={Quickstart}/>
+			          	</div>
+			          	<h4 className="heading">Quick Start</h4>
+			          	<p className="content">It takes two days to install Bitfury BlockBox AC on a properly prepared site.  Once installed, the solution connects to the mining pool, and immediately starts to generate income.</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={Portable} />
-		          	</div>
-		          	<h4 className="heading">Modularity</h4>
-		          	<p className="content">Bitfury BlockBox AC is a full-featured, self-contained solution for bitcoin mining, delivered in a 40’ High Cube freight container.  Once installed, no further investments of time, capital, or expertise are required for the solution maintenance.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={Portable} />
+			          	</div>
+			          	<h4 className="heading">Modularity</h4>
+			          	<p className="content">Bitfury BlockBox AC is a full-featured, self-contained solution for bitcoin mining, delivered in a 40’ High Cube freight container.  Once installed, no further investments of time, capital, or expertise are required for the solution maintenance.</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={CuttingEdge} />
-		          	</div>
-		          	<h4 className="heading">Resilience</h4>
-		          	<p className="content">The Bitfury BlockBox AC solution is supported. Bitfury engineers and service partners ensure the equipment operates at top capacity. All solution components – from servers and their elements to power supply units and coolers – are replaceable.</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={CuttingEdge} />
+			          	</div>
+			          	<h4 className="heading">Resilience</h4>
+			          	<p className="content">The Bitfury BlockBox AC solution is supported. Bitfury engineers and service partners ensure the equipment operates at top capacity. All solution components – from servers and their elements to power supply units and coolers – are replaceable.</p>
+		          	</Bounce>
 		          </Col>
 		        </Row>
 			    </div>
@@ -150,44 +166,52 @@ class Projects extends Component {
 			      <div className="title-divider align-center" />
 		        <Row gutter={48} type="flex" justify="center" align="center">
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={ChangeDay} className="svg-icon" />
-		          	</div>
-		          	<h4 className="heading">Phase One; Complete</h4>
-		          	<p className="content">Drumheller Alberta: 17 Bitcoin mining <br /> datacenters representing 18.7 MW / 128 PH/s</p>
+			          <Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={ChangeDay} className="svg-icon" />
+			          	</div>
+			          	<h4 className="heading">Phase One; Complete</h4>
+			          	<p className="content">Drumheller Alberta: 17 Bitcoin mining <br /> datacenters representing 18.7 MW / 128 PH/s</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={ChangeDay} className="svg-icon" />
-		          	</div>
-		          	<h4 className="heading">Phase Two; Operational September 2018</h4>
-		          	<p className="content">Medicine Hat Alberta : 40 Bitcoin mining <br /> datacenters  representing 42 MW / 300 PH/s</p>
+		          	<Bounce bottom>
+			          	<div className="icon-image">	
+			          		<img src={ChangeDay} className="svg-icon" />
+			          	</div>
+			          	<h4 className="heading">Phase Two; Operational September 2018</h4>
+			          	<p className="content">Medicine Hat Alberta : 40 Bitcoin mining <br /> datacenters  representing 42 MW / 300 PH/s</p>
+		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
-		          	<div className="icon-image">	
-		          		<img src={ChangeDay} className="svg-icon" />
-		          	</div>
-		          	<h4 className="heading">Aggregate Operations</h4>
-		          	<p className="content">60.7 MW / 428 PH/s – Fully funded </p>
+		          	<Bounce bottom>
+		          		<div className="icon-image">	
+			          		<img src={ChangeDay} className="svg-icon" />
+			          	</div>
+			          	<h4 className="heading">Aggregate Operations</h4>
+			          	<p className="content">60.7 MW / 428 PH/s – Fully funded </p>
+			          </Bounce>
 		          </Col>
 		        </Row>
 		      </div>
 		    </section>
 			  <section className="plain-section project-1">
           <div className="container text-center">
-            <Row gutter={16} type="flex" justify="center">
-              <Col md={24}>
-                <h1 className="title">Medicine Hat, Alberta Project</h1>
-              </Col>
-              <Col md={24}>
-              	<img src={drumBeller} className="blockbox-ac" />
-              </Col>
-              <Col md={18}>
-              	<p className="content">Medicine Hat, Alberta, a warm, vibrant, feel-good city, with the attitude and natural backdrop to match, will be home to Hut 8 Mining’s newest BlockBox Data Centre. The City offers stable, cost-competitive utility rates and has been welcoming and supportive of Hut 8 Mining’s fast paced growth plans. This partnership, together with the success of Hut 8’s recent capital raising efforts and the provision of land and electricity through CMH, will enable the Company to  service the full complement of 40 BlockBox Data Centers with an aggregate power capacity of approximately 42 MW.</p>
-              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
-		                >  Learn More </Button>
-              </Col>
-            </Row>
+	          <Fade bottom>
+	            <Row gutter={16} type="flex" justify="center">
+	              <Col md={24}>
+	                <h1 className="title">Medicine Hat, Alberta Project</h1>
+	              </Col>
+	              <Col md={24}>
+	              	<img src={drumBeller} className="blockbox-ac" />
+	              </Col>
+	              <Col md={18}>
+	              	<p className="content">Medicine Hat, Alberta, a warm, vibrant, feel-good city, with the attitude and natural backdrop to match, will be home to Hut 8 Mining’s newest BlockBox Data Centre. The City offers stable, cost-competitive utility rates and has been welcoming and supportive of Hut 8 Mining’s fast paced growth plans. This partnership, together with the success of Hut 8’s recent capital raising efforts and the provision of land and electricity through CMH, will enable the Company to  service the full complement of 40 BlockBox Data Centers with an aggregate power capacity of approximately 42 MW.</p>
+	              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
+			                >  Learn More </Button>
+	              </Col>
+	            </Row>
+            </Fade>
           </div>
 			  </section>
 			  <section className="plain-section divider">
@@ -201,19 +225,21 @@ class Projects extends Component {
 			  </section>
 			  <section className="plain-section project-2">
           <div className="container text-center">
-            <Row gutter={16} type="flex" justify="center">
-              <Col md={24}>
-                <h1 className="title">Drumheller, Alberta Project</h1>
-              </Col>
-              <Col md={24}>
-              	<img src={hatAlberta} className="blockbox-ac" />
-              </Col>
-              <Col md={18}>
-              	<p className="content">Drumheller, Alberta, a popular tourist destination for “Hoodoos”, or tent rocks and dinosaur bones is home to Hut 8 Mining’s first Blockbox Data Centers. Being strategically located in Alberta where electricity costs are low due to an abundance of natural gas power, as well as a year-round cool climate, allows Hut8 Mining to access maximize the performance of the ASIC chips. The facility has 17 BlockBoxAC data centres with an aggregate power capacity of approximately 18.7 MW.</p>
-              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
-		                >  Learn More </Button>
-              </Col>
-            </Row>
+	          <Fade bottom>
+	            <Row gutter={16} type="flex" justify="center">
+	              <Col md={24}>
+	                <h1 className="title">Drumheller, Alberta Project</h1>
+	              </Col>
+	              <Col md={24}>
+	              	<img src={hatAlberta} className="blockbox-ac" />
+	              </Col>
+	              <Col md={18}>
+	              	<p className="content">Drumheller, Alberta, a popular tourist destination for “Hoodoos”, or tent rocks and dinosaur bones is home to Hut 8 Mining’s first Blockbox Data Centers. Being strategically located in Alberta where electricity costs are low due to an abundance of natural gas power, as well as a year-round cool climate, allows Hut8 Mining to access maximize the performance of the ASIC chips. The facility has 17 BlockBoxAC data centres with an aggregate power capacity of approximately 18.7 MW.</p>
+	              		<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn"
+			                >  Learn More </Button>
+	              </Col>
+	            </Row>
+            </Fade>
           </div>
 			  </section>
         <section className="why-choose-alberta dark-section">

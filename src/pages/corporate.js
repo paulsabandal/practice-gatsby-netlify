@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Carousel, Icon, Form, Input } from 'antd'
 import Link from 'gatsby-link'
+import Fade from 'react-reveal/Fade';
 import TextScramble from '../components/text-scrambler'
 import './corporate.scss';
 import Numeral01 from '../images/corporate/8-Numeral-01.png'
@@ -35,19 +36,21 @@ let members = [
 for (let i = 0; i < members.length; i++) {
   teamMembers.push (
 		<Col lg={8} md={8} sm={24} xs={24}>
-			<div className="member-thumbnail">
-  			<div className="photo">
-  				<img src={members[i].photo} className="photo-holder"/>
-  			</div>
-  			<div className="details">
-  				<h3 className="person">{ members[i].name }</h3>
-  				<div className="divider"></div>
-  				<div className="bio">
-						{ members[i].bio }
-  				</div>
-  				<div className="divider"></div>
-  			</div>
-  		</div>
+			<Fade bottom>
+				<div className="member-thumbnail">
+	  			<div className="photo">
+	  				<img src={members[i].photo} className="photo-holder"/>
+	  			</div>
+	  			<div className="details">
+	  				<h3 className="person">{ members[i].name }</h3>
+	  				<div className="divider"></div>
+	  				<div className="bio">
+							{ members[i].bio }
+	  				</div>
+	  				<div className="divider"></div>
+	  			</div>
+	  		</div>
+			</Fade>
 		</Col>
 	)
 }
@@ -99,9 +102,11 @@ class Corporate extends Component {
         </section>
 			  <section className="what-is-hut8 plain-section">
 			    <div className="container text-center">
-			      <h1 className="title">What’s behind the name “Hut 8”?</h1>
-			      <div className="title-divider align-center" />
-			      <p className="fixed-paragraph-width">The name “Hut 8” refers to the building at Bletchley Park where Alan Turing created his world-changing Enigma decoding machine. His work saved millions of lives, transformed cryptography and laid the foundation for Blockchain.</p>
+			    	<Fade bottom>
+				      <h1 className="title">What’s behind the name “Hut 8”?</h1>
+				      <div className="title-divider align-center" />
+				      <p className="fixed-paragraph-width">The name “Hut 8” refers to the building at Bletchley Park where Alan Turing created his world-changing Enigma decoding machine. His work saved millions of lives, transformed cryptography and laid the foundation for Blockchain.</p>
+			    	</Fade>
 			    </div>
 			  </section>
 			  <section className="blank-video dark-section">
@@ -110,18 +115,20 @@ class Corporate extends Component {
 			  </section>
 			  <section className="about-hut8 plain-section">
 			    <div className="container text-center">
-			      <h1 className="title">About Hut 8 Mining Corp.</h1>
-			      <div className="title-divider align-center" />
-			      <p className="fixed-paragraph-width">Hut 8 Mining is a cryptocurrency mining and Blockchain infrastructure company established through an exclusive partnership with Bitfury, one of the world’s leading Blockchain technology companies. Hut8 Mining currently owns bitcoin mining datacenters representing 24.2 MW and 165 PH/s that are in operation or under construction, with a pipeline of acquisition and development opportunities across North America. Hut 8 Mining is led by a team of industry experts to provide investors with exposure to Blockchain processing infrastructure and technology along with underlying cryptocurrency rewards and revenue from transaction fees.</p>
+			    	<Fade bottom>
+				      <h1 className="title">About Hut 8 Mining Corp.</h1>
+				      <div className="title-divider align-center" />
+				      <p className="fixed-paragraph-width">Hut 8 Mining is a cryptocurrency mining and Blockchain infrastructure company established through an exclusive partnership with Bitfury, one of the world’s leading Blockchain technology companies. Hut8 Mining currently owns bitcoin mining datacenters representing 24.2 MW and 165 PH/s that are in operation or under construction, with a pipeline of acquisition and development opportunities across North America. Hut 8 Mining is led by a team of industry experts to provide investors with exposure to Blockchain processing infrastructure and technology along with underlying cryptocurrency rewards and revenue from transaction fees.</p>
+			    	</Fade>
 			    </div>
 			  </section>
 			  <section className="about-pictures plain-section">
 			  	<Row>
 			  		<Col span={8}>
-			  			<img src={Numeral02} />
+				  		<img src={Numeral02} />
 			  		</Col>
 			  		<Col span={8}>
-			  			<img src={Decoder01} />
+				  		<img src={Decoder01} />
 			  		</Col>
 			  		<Col span={8}>
 			  			<img src={Numeral01} />
@@ -177,38 +184,40 @@ class Corporate extends Component {
 			      <h1 className="title text-center">Our Executive Team</h1>
 			      <div className="title-divider align-center" />
 				  	<Row type="flex" justify="center" align="top">
-				  		<Col lg={12} md={12} sm={24} xs={24}>
-				  			<div className="member-thumbnail">
-					  			<div className="photo">
-					  				<img src={Andrew} className="photo-holder"/>
-					  			</div>
-					  			<div className="details">
-					  				<h3 className="person">ANDREW KIGUEL</h3>
-					  				<p className="position">CEO</p>
-					  				<div className="divider"></div>
-					  				<div className="bio">
-											Andrew joins Hut 8 from GMP Securities L.P., where he played an integral role for more than 18 years, including most recently as Managing Director, Investment Banking, as well as a key member of GMP’s Blockchain Investment Banking Group. He is a co-founder of Hut 8 and played a fundamental role in the formation, structure and financing of Hut 8.  Andrew has extensive experience in providing investment banking services to numerous public and private entities, including raising equity and debt capital in excess of C$3 billion over the last five years. He has also worked in an advisory role on numerous marquee M&A transactions.
-					  				</div>
-					  				<div className="divider"></div>
-					  			</div>
-					  		</div>
-				  		</Col>
-				  		<Col lg={12} md={12} sm={24} xs={24}>
-				  			<div className="member-thumbnail">
-					  			<div className="photo">
-					  				<img src={Kyle} className="photo-holder"/>
-					  			</div>
-					  			<div className="details">
-					  				<h3 className="person">KYLE APPLEBY</h3>
-					  				<p className="position">CFO</p>
-					  				<div className="divider"></div>
-					  				<div className="bio">
-											Since 2007, Kyle has been providing CFO services to a number of public and private companies both domestic and international. He has focused on assisting companies with financial reporting and controls, governance, operations, financing and regulatory compliance. Prior to 2007, Kyle worked for several public accounting firms in Canada. He is a member in good standing of the Chartered Professional Accountants of Canada and the Chartered Professional Accountants of Ontario.x
-					  				</div>
-					  				<div className="divider"></div>
-					  			</div>
-					  		</div>
-				  		</Col>
+				  		<Fade bottom>
+					  		<Col lg={12} md={12} sm={24} xs={24}>
+					  			<div className="member-thumbnail">
+						  			<div className="photo">
+						  				<img src={Andrew} className="photo-holder"/>
+						  			</div>
+						  			<div className="details">
+						  				<h3 className="person">ANDREW KIGUEL</h3>
+						  				<p className="position">CEO</p>
+						  				<div className="divider"></div>
+						  				<div className="bio">
+												Andrew joins Hut 8 from GMP Securities L.P., where he played an integral role for more than 18 years, including most recently as Managing Director, Investment Banking, as well as a key member of GMP’s Blockchain Investment Banking Group. He is a co-founder of Hut 8 and played a fundamental role in the formation, structure and financing of Hut 8.  Andrew has extensive experience in providing investment banking services to numerous public and private entities, including raising equity and debt capital in excess of C$3 billion over the last five years. He has also worked in an advisory role on numerous marquee M&A transactions.
+						  				</div>
+						  				<div className="divider"></div>
+						  			</div>
+						  		</div>
+					  		</Col>
+					  		<Col lg={12} md={12} sm={24} xs={24}>
+					  			<div className="member-thumbnail">
+						  			<div className="photo">
+						  				<img src={Kyle} className="photo-holder"/>
+						  			</div>
+						  			<div className="details">
+						  				<h3 className="person">KYLE APPLEBY</h3>
+						  				<p className="position">CFO</p>
+						  				<div className="divider"></div>
+						  				<div className="bio">
+												Since 2007, Kyle has been providing CFO services to a number of public and private companies both domestic and international. He has focused on assisting companies with financial reporting and controls, governance, operations, financing and regulatory compliance. Prior to 2007, Kyle worked for several public accounting firms in Canada. He is a member in good standing of the Chartered Professional Accountants of Canada and the Chartered Professional Accountants of Ontario.x
+						  				</div>
+						  				<div className="divider"></div>
+						  			</div>
+						  		</div>
+					  		</Col>
+				  		</Fade>
 				  	</Row>
 		  		</div>
 			  </section>

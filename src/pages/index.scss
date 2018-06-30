@@ -114,7 +114,7 @@
 		&.image-right {
 			display: none;
 			@include for-tablet-portrait-up {
-				display: block;
+				display: inline;
 			}
 		}
 		
