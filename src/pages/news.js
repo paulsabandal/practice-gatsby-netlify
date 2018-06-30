@@ -54,10 +54,10 @@ class News extends Component {
                       <ul className="entry-meta">
                         <li class="meta-date">March 19, 2018</li>
                         <li class="meta-author">
-                          <a href="https://www.hut8mining.com/author/hut8mining/" original-title="View all posts by hut8mining">hut8mining</a>
+                          <a href="https://www.hut8mining.com/author/hut8mining/">hut8mining</a>
                         </li>
                         <li class="meta-category">
-                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag" original-title="">Press Release</a>
+                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag">Press Release</a>
                         </li>
                       </ul>
                     </div>
@@ -85,10 +85,10 @@ class News extends Component {
                       <ul className="entry-meta">
                         <li class="meta-date">March 19, 2018</li>
                         <li class="meta-author">
-                          <a href="https://www.hut8mining.com/author/hut8mining/" original-title="View all posts by hut8mining">hut8mining</a>
+                          <a href="https://www.hut8mining.com/author/hut8mining/">hut8mining</a>
                         </li>
                         <li class="meta-category">
-                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag" original-title="">Press Release</a>
+                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag">Press Release</a>
                         </li>
                       </ul>
                     </div>
@@ -114,12 +114,12 @@ class News extends Component {
                         Vancouver, British Columbia, March 19, 2018 – Hut 8 Mining Corp. (TSXV: HUT) (“Hut 8” or the “Company”), is pleased to announce today that it has entered into definitive agreements with the City of Medicine Hat (“CMH”) for the supply of 42 MW of electric energy and the lease of... <a href="">read more →</a>
                       </p>
                       <ul className="entry-meta">
-                        <li class="meta-date">March 19, 2018</li>
-                        <li class="meta-author">
-                          <a href="https://www.hut8mining.com/author/hut8mining/" original-title="View all posts by hut8mining">hut8mining</a>
+                        <li className="meta-date">March 19, 2018</li>
+                        <li className="meta-author">
+                          <a href="https://www.hut8mining.com/author/hut8mining/">hut8mining</a>
                         </li>
-                        <li class="meta-category">
-                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag" original-title="">Press Release</a>
+                        <li className="meta-category">
+                          <a href="https://www.hut8mining.com/category/press-release/" rel="category tag">Press Release</a>
                         </li>
                       </ul>
                     </div>
@@ -132,7 +132,7 @@ class News extends Component {
                 <div className="menu-title">
                   Newsletter
                 </div>
-                <Form layout="" onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmit}>
                   <FormItem
                     wrapperCol={{ span: 24 }}
                     className="subscription-input"

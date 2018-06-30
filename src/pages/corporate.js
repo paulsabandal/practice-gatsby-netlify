@@ -35,7 +35,7 @@ let members = [
 
 for (let i = 0; i < members.length; i++) {
   teamMembers.push (
-		<Col lg={8} md={8} sm={24} xs={24}>
+		<Col lg={8} md={8} sm={24} xs={24} key={i}>
 			<Fade bottom>
 				<div className="member-thumbnail">
 	  			<div className="photo">

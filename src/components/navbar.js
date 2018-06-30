@@ -25,6 +25,7 @@ class Navbar extends Component {
 
   setNavOpaque() {
     let pathName = location.pathname || '';
+    console.log(pathName);
     let OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
 
     const mainHeader = document.querySelector(".main-header");

@@ -119,7 +119,7 @@ class Investors extends Component {
 
     general_faqs = general.map((general, i) =>
       <Collapse bordered={false}>
-        <Panel header={general.q}  key={i}>
+        <Panel header={general.q} key={i}>
           {general.a}
         </Panel>
       </Collapse>

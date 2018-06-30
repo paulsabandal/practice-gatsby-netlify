@@ -79,7 +79,7 @@ class Contact extends Component {
 					        </FormItem>
 					        <FormItem
 					          {...formItemLayout}
-					          label="Your Email"
+					          label="Your Message"
 					        >
 					          {getFieldDecorator('textarea', {
 					            rules: [{
@@ -88,7 +88,7 @@ class Contact extends Component {
 					              required: true, message: 'Please input your E-mail!',
 					            }],
 					          })(
-					            <TextArea row={4} />
+					            <TextArea />
 					          )}
 					        </FormItem>
 					      </Form>
