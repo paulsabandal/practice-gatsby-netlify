@@ -69,8 +69,11 @@ class Navbar extends Component {
   }
 
   render() {
+    const pathName = location.pathname || '';
+    const OpaqueNav = (pathName == "/news/") || (pathName == "/contact/") ? "opaque-true" : "";
+
     return (
-      <div className={`navbar container unscrolled ${this.state.isOpaqueNav}`}>
+      <div className={`navbar container unscrolled ${OpaqueNav}`}>
         <div className="logo">
           <Link to="/">
             <img src={LogoWhite} className="logo-white" />
