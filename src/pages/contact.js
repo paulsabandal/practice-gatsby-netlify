@@ -91,6 +91,9 @@ class Contact extends Component {
 					            <TextArea />
 					          )}
 					        </FormItem>
+					        <FormItem>
+					        	<Button size="small" type="primary" htmlType="submit" href="/" className="subscription-btn">Submit</Button>
+					        </FormItem>
 					      </Form>
             	</Col>
               <Col md={12} sm={24} xs={24}>
