@@ -41,11 +41,11 @@ class Footer extends Component {
                   className="menu"
                 >
                   <Menu.Item key="1"> <Link to="/">Home <Icon type="right" /> </Link></Menu.Item>
-                  <Menu.Item key="2"><Link to="/about">Corporate <Icon type="right" /> </Link></Menu.Item>
-                  <Menu.Item key="3"><Link to="/projects">Projects <Icon type="right" /> </Link></Menu.Item>
-                  <Menu.Item key="4"><Link to="/investors">Investors <Icon type="right" /> </Link></Menu.Item>
-                  <Menu.Item key="5"><Link to="/news">News <Icon type="right" /> </Link></Menu.Item>
-                  <Menu.Item key="6"><Link to="/contact">Contact <Icon type="right" /> </Link></Menu.Item>
+                  <Menu.Item key="2"><Link to="/corporate/">Corporate <Icon type="right" /> </Link></Menu.Item>
+                  <Menu.Item key="3"><Link to="/projects/">Projects <Icon type="right" /> </Link></Menu.Item>
+                  <Menu.Item key="4"><Link to="/investors/">Investors <Icon type="right" /> </Link></Menu.Item>
+                  <Menu.Item key="5"><a href="/news/">News <Icon type="right" /> </a></Menu.Item>
+                  <Menu.Item key="6"><a href="/contact/">Contact <Icon type="right" /> </a></Menu.Item>
                 </Menu>
               </Col>
               <Col lg={6} md={12} sm={24} xs={24}>
@@ -56,11 +56,11 @@ class Footer extends Component {
                   mode="vertical"
                   className="menu"
                 >
-                  <Menu.Item key="1"> <Link to="/">Hut 8 Mining Corp. Announces Electricity Supply Agreement with City of Medicine Hat <Icon type="right" /></Link></Menu.Item>
-                  <Menu.Item key="2"><Link to="/about">Hut 8 Mining Corp. Announces Appointment of Andrew Kiguel as President and Chief Executive Officer and Director <Icon type="right" /></Link></Menu.Item>
-                  <Menu.Item key="3"><Link to="/projects">Hut 8 Commences Trading on TSXV, Currently World’s Largest Publicly Traded Cryptocurrency Miner <Icon type="right" /></Link></Menu.Item>
-                  <Menu.Item key="4"><Link to="/investors">Hut 8 Mining, a way to play crypto, debuts on TSX Venture <Icon type="right" /></Link></Menu.Item>
-                  <Menu.Item key="5"><Link to="/news">Bitcoin battle brewing behind Hut 8 Mining’s Canadian TSX listing <Icon type="right" /></Link></Menu.Item>
+                  <Menu.Item key="1"><a href="/news/">Hut 8 Mining Corp. Announces Electricity Supply Agreement with City of Medicine Hat <Icon type="right" /></a></Menu.Item>
+                  <Menu.Item key="2"><a href="/news/">Hut 8 Mining Corp. Announces Appointment of Andrew Kiguel as President and Chief Executive Officer and Director <Icon type="right" /></a></Menu.Item>
+                  <Menu.Item key="3"><a href="/news/">Hut 8 Commences Trading on TSXV, Currently World’s Largest Publicly Traded Cryptocurrency Miner <Icon type="right" /></a></Menu.Item>
+                  <Menu.Item key="4"><a href="/news/">Hut 8 Mining, a way to play crypto, debuts on TSX Venture <Icon type="right" /></a></Menu.Item>
+                  <Menu.Item key="5"><a href="/news/">Bitcoin battle brewing behind Hut 8 Mining’s Canadian TSX listing <Icon type="right" /></a></Menu.Item>
                 </Menu>
               </Col>
               <Col lg={6} md={12} sm={24} xs={24}>
