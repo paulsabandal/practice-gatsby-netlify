@@ -105,7 +105,7 @@ class Corporate extends Component {
 			    	<Fade bottom>
 				      <h1 className="title">What’s behind the name “Hut 8”?</h1>
 				      <div className="title-divider align-center" />
-				      <p className="fixed-paragraph-width">The name “Hut 8” refers to the building at Bletchley Park where Alan Turing created his world-changing Enigma decoding machine. His work saved millions of lives, transformed cryptography and laid the foundation for Blockchain.</p>
+				      <p className="fixed-paragraph-width text-center">The name “Hut 8” refers to the building at Bletchley Park where Alan Turing created his world-changing Enigma decoding machine. His work saved millions of lives, transformed cryptography and laid the foundation for Blockchain.</p>
 			    	</Fade>
 			    </div>
 			  </section>
@@ -118,7 +118,7 @@ class Corporate extends Component {
 			    	<Fade bottom>
 				      <h1 className="title">About Hut 8 Mining Corp.</h1>
 				      <div className="title-divider align-center" />
-				      <p className="fixed-paragraph-width">Hut 8 Mining is a cryptocurrency mining and Blockchain infrastructure company established through an exclusive partnership with Bitfury, one of the world’s leading Blockchain technology companies. Hut8 Mining currently owns bitcoin mining datacenters representing 24.2 MW and 165 PH/s that are in operation or under construction, with a pipeline of acquisition and development opportunities across North America. Hut 8 Mining is led by a team of industry experts to provide investors with exposure to Blockchain processing infrastructure and technology along with underlying cryptocurrency rewards and revenue from transaction fees.</p>
+				      <p className="fixed-paragraph-width text-center">Hut 8 Mining is a cryptocurrency mining and Blockchain infrastructure company established through an exclusive partnership with Bitfury, one of the world’s leading Blockchain technology companies. Hut8 Mining currently owns bitcoin mining datacenters representing 24.2 MW and 165 PH/s that are in operation or under construction, with a pipeline of acquisition and development opportunities across North America. Hut 8 Mining is led by a team of industry experts to provide investors with exposure to Blockchain processing infrastructure and technology along with underlying cryptocurrency rewards and revenue from transaction fees.</p>
 			    	</Fade>
 			    </div>
 			  </section>
@@ -151,13 +151,16 @@ class Corporate extends Component {
 		  	  <div className="container text-center">
 				  	<Row>
 				  		<Col lg={8} md={8} sm={24} xs={24}>
-				  			<h2>57 <br /> <small>Datacenter</small></h2>
+				  			<h2 className="text-center">57</h2>
+								<small>Datacenter</small>
 				  		</Col>
 				  		<Col lg={8} md={8} sm={24} xs={24}>
-				  			<h2>62 <br /> <small>Megawatts</small></h2>
+				  			<h2 className="text-center">62</h2>
+				  			<small>Megawatts</small>
 				  		</Col>
 				  		<Col lg={8} md={8} sm={24} xs={24}>
-				  			<h2>428 <br /> <small>PH/S</small></h2>
+				  			<h2 className="text-center">428</h2>
+				  			<small>PH/S</small>
 				  		</Col>
 				  	</Row>
 		  		</div>
@@ -175,7 +178,7 @@ class Corporate extends Component {
 					  			</p>
 					  		</Col>
 					  	</Row>
-					  	 <h2 className="title sub-title">“We believe the world is changing and we are <br /> on the front lines of this groundbreaking evolution.”</h2>
+					  	 <h2 className="title sub-title text-center">“We believe the world is changing and we are <br /> on the front lines of this groundbreaking evolution.”</h2>
 			  		</div>
 			  </section>
 

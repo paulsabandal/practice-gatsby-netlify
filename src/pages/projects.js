@@ -171,7 +171,7 @@ class Projects extends Component {
 			          		<img src={ChangeDay} className="svg-icon" />
 			          	</div>
 			          	<h4 className="heading">Phase One; Complete</h4>
-			          	<p className="content">Drumheller Alberta: 17 Bitcoin mining <br /> datacenters representing 18.7 MW / 128 PH/s</p>
+			          	<p className="content text-center">Drumheller Alberta: 17 Bitcoin mining <br /> datacenters representing 18.7 MW / 128 PH/s</p>
 		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
@@ -180,7 +180,7 @@ class Projects extends Component {
 			          		<img src={ChangeDay} className="svg-icon" />
 			          	</div>
 			          	<h4 className="heading">Phase Two; Operational September 2018</h4>
-			          	<p className="content">Medicine Hat Alberta : 40 Bitcoin mining <br /> datacenters  representing 42 MW / 300 PH/s</p>
+			          	<p className="content text-center">Medicine Hat Alberta : 40 Bitcoin mining <br /> datacenters  representing 42 MW / 300 PH/s</p>
 		          	</Bounce>
 		          </Col>
 		          <Col md={8} xs={24}>
@@ -189,7 +189,7 @@ class Projects extends Component {
 			          		<img src={ChangeDay} className="svg-icon" />
 			          	</div>
 			          	<h4 className="heading">Aggregate Operations</h4>
-			          	<p className="content">60.7 MW / 428 PH/s – Fully funded </p>
+			          	<p className="content text-center">60.7 MW / 428 PH/s – Fully funded </p>
 			          </Bounce>
 		          </Col>
 		        </Row>
